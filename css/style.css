@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+#wrap{position: relative; min-height: -webkit-fill-available;}
+
+/* 공통 - 가운데영역 */
+.container{padding: 0 18px;}
+
+/* 공통-팝업 */
+.comPopup{padding: 29px 17px 17px; width: 316px; position: fixed; top:50%; left:50%; transform: translate(-50%, -50%); background-color: #fff; border-radius: 33px; z-index: 99999;}
+.comPopup .popupText01{ text-align: center; margin-bottom: 27px;}
+.comPopup .popupText02{margin-bottom: 13px; font-size: 18px; font-weight: 600; text-align: center;}
+.bg{position: fixed; top:0; left:0; right:0; bottom: 0; background-color: rgba(0,0,0,.5); z-index: 99;}
+.comPopup .icon{display: block; margin: 0 auto 31px; width: 43px; height: 43px;}
+.comPopup .icon.warning{background: url(../images/common/warning_icon.svg)no-repeat; background-size: cover;}
+.comPopup .icon.check{background: url(../images/common/check_icon.svg)no-repeat; background-size: cover;}
+
+/* 공통-버튼 */
+.disabled{background-color: rgba(6, 106, 235, 0.4)!important; cursor: none; pointer-events: none;}
+button:disabled{background-color: rgba(6, 106, 235, 0.4)!important;}
+.btnBox{margin-bottom: 34px;}
+.combtnBox{display: flex; align-items: center; gap:0 8px;}
+.combtn{display: block; width: 100%; height: 57px; line-height: 58px; border-radius: 17px; text-align: center; font-weight: 600; font-size: 17px;}
+.combtn.comBorder{border-radius: 17px;}
+.combtn.comBtnSt01{ background-color: #066AEB; color: #fff; }
+.combtn.comBtnSt02{background-color: #E9ECEF;}
+.combtn.comBtnSt04{border: 1px solid #DCE0E8;}
+.combtn.comBtnSt03{/*position: absolute; left:0; right:0; bottom: 0; justify-self: flex-end;*/ border-radius: 0;}
+
+/* 공통-버튼(퀵) */
+.combtnBox02{display: flex; align-items: center; gap: 0 4px;}
+.combtnBox02 .combtn{height: 50px; line-height: 50px; font-size: 15px;}
+.combtnBox02 .comBtnSt04{width: 40%; font-weight: 400;}
+.combtnBox02 .comBtnSt01{width: 60%;}
+
+/* 공통 - 폼 */
+.inputTextBox.ResultBottomSt input{border: 0; padding: 0; border: 0!important;}
+.inputTextBox.focus label{top: 20px; font-size: 12px;}
+.inputTextBox.focus::after{display: none;}
+.inputTextBox{position: relative; margin-bottom: 0;}
+.inputTextBox::after{content: ''; position: absolute; left:18px; right:18px; bottom: 0; height: 1px; background-color: #F3F4F5;}
+.inputTextBox:last-child:after{display: none;}
+.inputTextBox input{display: block; height: 77px; padding: 33px 17px 13px 18px; /*padding: 29px 17px 28px 16px;*/ width: 100%; border: 1px solid #E6E8EC; border-radius: 13px; color: #11141B; font-size: 17px;}
+.inputTextBox label{position: absolute; left: 18px; top: 32px; color: #D7D8D9; transition: all .3s; line-height: 1; font-size: 17px; font-weight: 700;}
+.inputTextBox input:focus{border:2px solid #11141B!important;}
+.inputTextBox input::placeholder{color: #D7D8D9;}
+.formBox{ border: 1px solid #E6E8EC; border-radius: 13px;}
+.formBox input{border: 0;}
+.formBox .inputTextBox.ResultBox label{top:20px; font-size: 12px; color: #5C5F63;}
+.formBox .inputTextBox.ResultBox input{padding: 33px 17px 13px 18px;}
+.formBox .ResultBox label{font-weight: 400;}
+.formBox .ResultBox input{padding: 0;}
+.formBox .ResultBox input:focus{border: 0!important;}
+.ResultBox.ResultTopSt{border-radius: 13px 13px 0 0!important; border-bottom: 0!important; border-top: 1px solid #E6E8EC;}
+.ResultBox.ResultTopSt::after{display: none;}
+.ResultBox.ResultCenterSt{border-radius: 0!important; border-width: 0 1px!important;}
+.ResultBox.ResultBottomSt{border-radius: 0 0 13px 13px!important; border-top: 0!important;}
+.ResultSt input{border-radius: 13px 13px 0 0!important; border-bottom: 0!important;}
+.ResultSt input:focus{border-radius: 13px!important; border-bottom: 2px solid #11141B!important; z-index: 99;}
+.ResultBox span{display: block; margin-bottom: 4px; font-size: 12px; color: #5C5F63;}
+.ResultBox em{display: block; color: #11141B; font-size: 17px;}
+
+.formBox .inputTextBox.phoneNumber input{padding-left: 77px;}
+.formBox .inputTextBox.phoneNumber label{top: 20px; font-size: 12px;}
+.formBox .inputTextBox.phoneNumber .select{padding-right: 18px; position: absolute; top:36px; left:18px; font-size: 17px; border: 0; z-index: 9; transition: all .3s; appearance:none; background: url(../images/sub/select_icon01.svg)no-repeat 37px center; background-size: 13px 9px;}
+
+
+
+/* .formBox .formSelectBox{padding: 62px 17px 13px 18px; display: flex; align-items: center;}
+.formBox .formSelectBox select{height: 29px;  line-height: 29px; }
+.formBox .formSelectBox input{height: 29px; padding: 0!important;} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.textAreaBox{ overflow-y: auto;}
+.textAreaBox textarea{display: block; width: 100%; height: 335px; padding: 16px 17px 16px 16px; border: 1px solid #E6E8EC; border-radius: 13px; color: #ACB0BB; font-size: 15px; }
+.textAreaBox textarea::placeholder{color: #ACB0BB;}
+.selectBox{position: relative; margin-bottom: 7px;}
+.selectBox .select.active + .selectView{display: block;}
+.selectBox .select{position: relative; display: block; padding: 16px 17px 16px 16px; border: 1px solid #E6E8EC; border-radius: 13px; font-size: 15px; }
+.selectBox .select::after{content: ''; position: absolute; top:50%; right:17px; transform: translateY(-50%); background: url(../images/sub/selectarrow_icon.svg)no-repeat; width: 9px; height: 5px; background-size: cover;}
+.selectBox .select.active::after{transform: translateY(-50%) rotate(180deg);}
+.selectBox .selectView{display: none; padding: 15px 10px; position: absolute; top:56px; left:0; right:0; border: 1px solid #E6E8EC; border-radius: 13px; background-color: #fbfbfb; z-index: 9;}
+.selectBox .selectView a{display: block; padding: 10px 10px 13px 13px; font-size: 15px;}
+
+/* 헤더 */
+#header{position: sticky; top:0; left:0; right: 0; padding: 13px 0 21px; background-color: #fff; z-index: 99;}
+#header .header{display: flex; align-items: center; justify-content: space-between;}
+#header h1{font-size: 21px; font-weight: 600;}
+#header .link{display: flex; align-items: center; gap: 0 23px;}
+#header .link li a{position: relative; display: block;}
+#header .link li a::after{content: ''; position: absolute; top:0; right: 0; } 
+#header .link li a.search{width: 17px; height: 18px; background: url(../images/sub/headersearch_icon.svg)no-repeat center; background-size: cover;}
+#header .link li a.setting{width: 3px; height: 17px; background: url(../images/sub/header_setting.svg)no-repeat center; background-size: cover;}
+#header .link li a.filter{width: 20px; height: 19px; background: url(../images/sub/header_filter.svg)no-repeat center; background-size: cover;}
+#header .link li a.alarm{width: 18px; height: 22px; background: url(../images/common/alarm_icon.svg)no-repeat center; background-size: cover;}
+#header .link li a.user{width: 35px; height: 35px; background: url(../images/common/user_img01.svg)no-repeat center; background-size: cover;}
+
+/* 푸터 */
+#footer{position: absolute; left:0; right:0; bottom: 0; background-color: #fff;}
+#footer .linkBox{position: relative; margin: 0 auto; height: 66px; display: flex; justify-content: center; background: url(../images/sub/footerbottom.png)no-repeat center top; background-size: cover;}
+#footer .linkBox::after{content: ''; position: absolute; top:0; left:0; right:0;}
+
+
+
+
+#footer .linkBox a{padding-top: 34px; position: relative; display: block; flex: 1; text-align: center; color: #232A37; font-size: 11px; line-height: 1;}
+#footer .linkBox a span{position: relative;}
+#footer .linkBox a span::after{content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%);}
+#footer .linkBox a.home span{padding-top: 24px;}
+#footer .linkBox a.home span::after{width: 19px; height: 19px; background: url(../images/sub/footer_home_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.home.active span::after{background: url(../images/sub/footer_home_active_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.current span{padding-top: 24px;}
+#footer .linkBox a.current span::after{width: 19px; height: 19px; }
+#footer .linkBox a.current span::after{background: url(../images/sub/footer_current_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.current.active span::after{background: url(../images/sub/activestatus_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.voice{padding-top: 0; margin-top: -13px;}
+#footer .linkBox a.voice span{position: absolute; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; border-radius: 50px; background-color: #0D5CDF; box-shadow: 0 5px 20px rgba(0, 37, 85, 0.3);}
+#footer .linkBox a.voice span::after{content: ''; width: 18px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/sub/voice_icon.svg)no-repeat; background-size: cover;}
+#footer .linkBox a.favorites span{padding-top: 24px;}
+#footer .linkBox a.favorites span::after{width: 20px; height: 19px; background: url(../images/sub/footer_favorites_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.favorites.active span::after{width: 20px; height: 19px; background: url(../images/sub/favorites_active_icon.svg)no-repeat center; background-size: cover;}
+#footer .linkBox a.favorites.icon span::before{content: ''; width: 4px; height: 4px; position: absolute; top:0; right:6px; background-color: #F52930; border-radius: 50px;}
+#footer .linkBox a.myInfo span{padding-top: 24px;}
+#footer .linkBox a.myInfo span::after{width: 18px; height: 19px; background: url(../images/sub/footer_info_icon.svg)no-repeat center; background-size: cover;}

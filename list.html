@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>작업내역</title>
+  <style>
+    .link {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th {
+      padding: 10px 50px;
+      background: #4253ab;
+      color: #fff;
+      border: 1px solid #ddd;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      width: 350px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    똑똑 App 작업내역
+  </h1>
+  <div class="list_wrap">
+    <div class="list_box">
+      <table>
+        <thead>
+          <tr>
+            <th>내용</th>
+            <th>파일명</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>메인-로그인 전</td>
+            <td><a href="index01.html" target="_blank">index01.html</a></td>
+          </tr>
+          <tr>
+            <td>메인</td>
+            <td><a href="index02.html" target="_blank">index02.html</a></td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              회원가입
+            </th>
+          </tr>
+          <tr>
+            <td>휴대폰인증-이름입력</td>
+            <td><a href="sub/SignUp_Certification_Name.html" target="_blank">SignUp_Certification_Name.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-주민등록번호입력</td>
+            <td><a href="sub/SignUp_Certification_ResidentRegNumber.html"
+                target="_blank">SignUp_Certification_ResidentRegNumber.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-휴대폰입력</td>
+            <td><a href="sub/SignUp_Certification_PhoneNumber.html"
+                target="_blank">SignUp_Certification_PhoneNumber.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-휴대폰입력-통신사선택</td>
+            <td><a href="sub/SignUp_Certification_PhoneNumber_Popup.html"
+                target="_blank">SignUp_Certification_PhoneNumber_Popup.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-휴대폰입력-약관동의</td>
+            <td><a href="sub/SignUp_Certification_Agreement_Popup.html"
+                target="_blank">SignUp_Certification_Agreement_Popup.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-휴대폰입력-인증번호</td>
+            <td><a href="sub/SignUp_Certification_CertifiNumber_Popup.html"
+                target="_blank">SignUp_Certification_CertifiNumber_Popup.html</a></td>
+          </tr>
+          <tr>
+            <td>회원구분</td>
+            <td>
+              <a href="sub/SignUp_Division.html" target="_blank">SignUp_Division.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">개인회원</td>
+          </tr>
+          <tr>
+            <td>개인회원-이메일입력</td>
+            <td>
+              <a href="sub/SignUp_Individual_Email.html" target="_blank">SignUp_Individual_Email.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-비밀번호입력</td>
+            <td>
+              <a href="sub/SignUp_Individual_Password01.html" target="_blank">SignUp_Individual_Password01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-비밀번호입력</td>
+            <td>
+              <a href="sub/SignUp_Individual_Password02.html" target="_blank">SignUp_Individual_Password02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-주소입력</td>
+            <td>
+              <a href="sub/SignUp_Individual_Address.html" target="_blank">SignUp_Individual_Address.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-주소검색</td>
+            <td>
+              <a href="sub/SignUp_Individual_Address_Search01.html"
+                target="_blank">SignUp_Individual_Address_Search01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-주소검색</td>
+            <td>
+              <a href="sub/SignUp_Individual_Address_Search02.html"
+                target="_blank">SignUp_Individual_Address_Search02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-주소상세</td>
+            <td>
+              <a href="sub/SignUp_Individual_Address_SearchDetail.html"
+                target="_blank">SignUp_Individual_Address_SearchDetail.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-개인회원 정보 확인</td>
+            <td>
+              <a href="sub/SignUp_Individual_InfoCheck.html" target="_blank">SignUp_Individual_InfoCheck.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>개인회원-회원가입 완료</td>
+            <td>
+              <a href="sub/SignUp_Individual_SignUpComplete.html"
+                target="_blank">SignUp_Individual_SignUpComplete.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">기업회원</td>
+          </tr>
+          <tr>
+            <td>기업회원-사업자등록번호</td>
+            <td>
+              <a href="sub/SignUp_Enterprise_Number.html" target="_blank">SignUp_Enterprise_Number.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>기업회원-이메일입력</td>
+            <td>
+              <a href="sub/SignUp_Enterprise_Email.html" target="_blank">SignUp_Enterprise_Email.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>기업회원-부서입력</td>
+            <td>
+              <a href="sub/SignUp_Enterprise_Department.html" target="_blank">SignUp_Enterprise_Department.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>기업회원-회원가입 완료</td>
+            <td>
+              <a href="sub/SignUp_Enterprise_SignUpComplete01.html"
+                target="_blank">SignUp_Enterprise_SignUpComplete01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>기업회원-회원가입 완료</td>
+            <td>
+              <a href="sub/SignUp_Enterprise_SignUpComplete02.html"
+                target="_blank">SignUp_Enterprise_SignUpComplete02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">휴대폰인증-팝업</td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-재확인</td>
+            <td><a href="sub/SignUp_Certification_CheckPopup01.html"
+                target="_blank">SignUp_Certification_CheckPopup01.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-완료</td>
+            <td><a href="sub/SignUp_Certification_CheckPopup02.html"
+                target="_blank">SignUp_Certification_CheckPopup02.html</a></td>
+          </tr>
+          <tr>
+            <td>휴대폰인증-취소</td>
+            <td><a href="sub/SignUp_Certification_CheckPopup03.html"
+                target="_blank">SignUp_Certification_CheckPopup03.html</a></td>
+          </tr>
+          <tr>
+            <td colspan="2">사업자등록번호-팝업</td>
+          </tr>
+          <tr>
+            <td>사업자등록번호-완료</td>
+            <td><a href="sub/SignUp_BusinessReg_CheckPopup01.html"
+                target="_blank">SignUp_BusinessReg_CheckPopup01.html</a></td>
+          </tr>
+          <tr>
+            <td>사업자등록번호-재확인</td>
+            <td><a href="sub/SignUp_BusinessReg_CheckPopup02.html"
+                target="_blank">SignUp_BusinessReg_CheckPopup02.html</a></td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              퀵
+            </th>
+          </tr>
+          <tr>
+            <td>퀵-서비스유형선택</td>
+            <td><a href="sub/Quick_ServiceSelect.html" target="_blank">Quick_ServiceSelect.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-배송예약시간</td>
+            <td><a href="sub/Quick_ReservationTime.html" target="_blank">Quick_ReservationTime.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발/도착지 설정</td>
+            <td><a href="sub/Quick_Setting01.html" target="_blank">Quick_Setting01.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발지 설정</td>
+            <td><a href="sub/Quick_Setting02.html" target="_blank">Quick_Setting02.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-최근 검색기록 없음</td>
+            <td><a href="sub/Quick_Setting03.html" target="_blank">Quick_Setting03.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발지 검색</td>
+            <td><a href="sub/Quick_Setting04.html" target="_blank">Quick_Setting04.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발지 검색 상세정보</td>
+            <td><a href="sub/Quick_Setting_DetailInfo01.html" target="_blank">Quick_Setting_DetailInfo01.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발지 검색 상세정보(특이사항)</td>
+            <td><a href="sub/Quick_Setting_DetailInfo02.html" target="_blank">Quick_Setting_DetailInfo02.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-도착지가 가까운 경우</td>
+            <td><a href="sub/Quick_Setting05.html" target="_blank">Quick_Setting05.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-출발/도착지 설정</td>
+            <td><a href="sub/Quick_Setting06.html" target="_blank">Quick_Setting06.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-집/회사 설정</td>
+            <td><a href="sub/Quick_Setting08.html" target="_blank">Quick_Setting08.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-도착지 직접 설정</td>
+            <td><a href="sub/Quick_Setting07.html" target="_blank">Quick_Setting07.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-주소 요청</td>
+            <td><a href="sub/Quick_Address_Request01.html" target="_blank">Quick_Address_Request01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-주소 요청</td>
+            <td><a href="sub/Quick_Address_Request02.html" target="_blank">Quick_Address_Request02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-옵션선택</td>
+            <td><a href="sub/Quick_Option_Select.html" target="_blank">Quick_Option_Select.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-배송유형 선택</td>
+            <td><a href="sub/Quick_Category_Select.html" target="_blank">Quick_Category_Select.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보</td>
+            <td><a href="sub/Quick_ArticleInfo01.html" target="_blank">Quick_ArticleInfo01.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보(사진첨부 유형)</td>
+            <td><a href="sub/Quick_ArticleInfo02.html" target="_blank">Quick_ArticleInfo02.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보(사진첨부)</td>
+            <td><a href="sub/Quick_ArticleInfoImg.html" target="_blank">Quick_ArticleInfoImg.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보(사진이 없는 경우)</td>
+            <td><a href="sub/Quick_ArticleInfoText.html" target="_blank">Quick_ArticleInfoText.html</a></td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보-물품보관장소</td>
+            <td><a href="sub/Quick_StorageLocation01.html" target="_blank">Quick_StorageLocation01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보-출발지물품운반방법</td>
+            <td><a href="sub/Quick_StorageLocation02.html" target="_blank">Quick_StorageLocation02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-물품정보-도착지물품운반방법</td>
+            <td><a href="sub/Quick_StorageLocation03.html" target="_blank">Quick_StorageLocation03.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제</td>
+            <td><a href="sub/Quick_Payment01.html" target="_blank">Quick_Payment01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제</td>
+            <td><a href="sub/Quick_Payment02.html" target="_blank">Quick_Payment02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제수단 등록</td>
+            <td><a href="sub/Quick_Payment03.html" target="_blank">Quick_Payment03.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제수단 등록</td>
+            <td><a href="sub/Quick_Payment04.html" target="_blank">Quick_Payment04.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제수단 등록</td>
+            <td><a href="sub/Quick_Payment05.html" target="_blank">Quick_Payment05.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제수단 등록</td>
+            <td><a href="sub/Quick_Payment06.html" target="_blank">Quick_Payment06.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제수단</td>
+            <td><a href="sub/Quick_Payment07.html" target="_blank">Quick_Payment07.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-결제완료</td>
+            <td><a href="sub/Quick_PaymentComplete.html" target="_blank">Quick_PaymentComplete.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>퀵-배차완료</td>
+            <td><a href="sub/Quick_DispatchComplete.html" target="_blank">Quick_DispatchComplete.html</a>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              로그인
+            </th>
+          </tr>
+          <tr>
+            <td>로그인</td>
+            <td>
+              <a href="sub/Login.html" target="_blank">Login.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>로그인-이메일입력</td>
+            <td>
+              <a href="sub/Login_Email.html" target="_blank">Login_Email.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>로그인-비밀번호입력</td>
+            <td>
+              <a href="sub/Login_Password.html" target="_blank">Login_Password.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>로그인-이메일</td>
+            <td>
+              <a href="sub/Login_EmailLogin.html" target="_blank">Login_EmailLogin.html</a>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              내정보
+            </th>
+          </tr>
+          <tr>
+            <td>내정보</td>
+            <td><a href="sub/MyInfo.html" target="_blank">MyInfo.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보</td>
+            <td><a href="sub/MyInfo_IndividualInfo.html" target="_blank">MyInfo_IndividualInfo.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보-이메일수정</td>
+            <td><a href="sub/MyInfo_IndividualInfo_Email.html" target="_blank">MyInfo_IndividualInfo_Email.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보-주소검색</td>
+            <td><a href="sub/MyInfo_IndividualInfo_Search01.html"
+                target="_blank">MyInfo_IndividualInfo_Search01.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보(기업)</td>
+            <td><a href="sub/MyInfo_Enterprise.html" target="_blank">MyInfo_Enterprise.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보(기업)-부서명입력</td>
+            <td><a href="sub/MyInfo_Enterprise_Department.html" target="_blank">MyInfo_Enterprise_Department.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-개인정보(기업)-기업정보수정</td>
+            <td><a href="sub/MyInfo_Enterprise_Correction.html" target="_blank">MyInfo_Enterprise_Correction.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">결제수단관리</td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리</td>
+            <td><a href="sub/MyInfo_Payment.html" target="_blank">MyInfo_Payment.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-설정</td>
+            <td><a href="sub/MyInfo_Payment_Popup01.html" target="_blank">MyInfo_Payment_Popup01.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-추가</td>
+            <td><a href="sub/MyInfo_Payment_Popup02.html" target="_blank">MyInfo_Payment_Popup02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-은행선택</td>
+            <td><a href="sub/MyInfo_Payment_BankPopup.html" target="_blank">MyInfo_Payment_BankPopup.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-카드번호입력</td>
+            <td><a href="sub/MyInfo_Payment_CardNumber.html" target="_blank">MyInfo_Payment_CardNumber.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-유효기간입력</td>
+            <td><a href="sub/MyInfo_Payment_Expiration.html" target="_blank">MyInfo_Payment_Expiration.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-생년월일입력</td>
+            <td><a href="sub/MyInfo_Payment_BirthDate.html" target="_blank">MyInfo_Payment_BirthDate.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-카드비밀번호입력</td>
+            <td><a href="sub/MyInfo_Payment_CardPw.html" target="_blank">MyInfo_Payment_CardPw.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-결제수단관리-카드등록완료</td>
+            <td><a href="sub/MyInfo_Payment_CardComplete.html" target="_blank">MyInfo_Payment_CardComplete.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-쿠폰관리</td>
+            <td><a href="sub/MyInfo_Coupon.html" target="_blank">MyInfo_Coupon.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-공지사항/이벤트-리스트(공지사항)</td>
+            <td><a href="sub/MyInfo_NoticeList.html" target="_blank">MyInfo_NoticeList.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-공지사항/이벤트-리스트(이벤트)</td>
+            <td><a href="sub/MyInfo_EventList.html" target="_blank">MyInfo_EventList.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-공지사항/이벤트-상세</td>
+            <td><a href="sub/MyInfo_View.html" target="_blank">MyInfo_View.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-공지사항/이벤트-상세(이미지)</td>
+            <td><a href="sub/MyInfo_ImageView.html" target="_blank">MyInfo_ImageView.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-고객센터</td>
+            <td><a href="sub/MyInfo_ServiceCenterList.html" target="_blank">MyInfo_ServiceCenterList.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-고객센터-문의하기</td>
+            <td><a href="sub/MyInfo_ServiceCenter_Inquiry.html" target="_blank">MyInfo_ServiceCenter_Inquiry.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>내정보-설정</td>
+            <td><a href="sub/MyInfo_Setting.html" target="_blank">MyInfo_Setting.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-설정-비밀번호변경(기존 비밀번호)</td>
+            <td><a href="sub/MyInfo_Setting_Password01.html" target="_blank">MyInfo_Setting_Password01.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-설정-비밀번호변경 틀림</td>
+            <td><a href="sub/MyInfo_Error_Password.html" target="_blank">MyInfo_Error_Password.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-설정-비밀번호변경(새 비밀번호)</td>
+            <td><a href="sub/MyInfo_Setting_Password03.html" target="_blank">MyInfo_Setting_Password03.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-설정-비밀번호 재입력</td>
+            <td><a href="sub/MyInfo_Setting_Password04.html" target="_blank">MyInfo_Setting_Password04.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-이용약관-리스트</td>
+            <td><a href="sub/MyInfo_PolicyList.html" target="_blank">MyInfo_PolicyList.html</a></td>
+          </tr>
+          <tr>
+            <td>내정보-이용약관-상세</td>
+            <td><a href="sub/MyInfo_PolicyView.html" target="_blank">MyInfo_PolicyView.html</a></td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              즐겨찾기
+            </th>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소록/즐겨찾기</td>
+            <td><a href="sub/Favorites_AddressBook.html" target="_blank">Favorites_AddressBook.html</a></td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소추가</td>
+            <td><a href="sub/Favorites_AddressAdd.html" target="_blank">Favorites_AddressAdd.html</a></td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_사진추가</td>
+            <td><a href="sub/Favorites_ImgAdd.html" target="_blank">Favorites_ImgAdd.html</a></td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소추가_주소검색</td>
+            <td><a href="sub/Favorites_AddressSearchAdd.html" target="_blank">Favorites_AddressSearchAdd.html</a></td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소추가</td>
+            <td><a href="sub/Favorites_AddressAdd02.html" target="_blank">Favorites_AddressAdd02.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소록 삭제</td>
+            <td><a href="sub/Favorites_AddressBookDel.html" target="_blank">Favorites_AddressBookDel.html</a></td>
+          </tr>
+          <tr>
+            <td>즐겨찾기_주소검색</td>
+            <td><a href="sub/Favorites_AddressSearch.html" target="_blank">Favorites_AddressBookDel.html</a>
+            </td>
+          </tr>
+
+
+          <tr>
+            <th colspan="2">
+              이용현황
+            </th>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황</td>
+            <td><a href="sub/Status_Status01.html" target="_blank">Status_Status01.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황</td>
+            <td><a href="sub/Status_Status02.html" target="_blank">Status_Status02.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황(필터)</td>
+            <td><a href="sub/Status_Status_Filter.html" target="_blank">Status_Status_Filter.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황(삭제)</td>
+            <td><a href="sub/Status_Status_Del01.html" target="_blank">Status_Status_Del01.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황(삭제확인)</td>
+            <td><a href="sub/Status_Status_Del02.html" target="_blank">Status_Status_Del02.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황(선택삭제)</td>
+            <td><a href="sub/Status_Status_Del03-1.html" target="_blank">Status_Status_Del03-1.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-이용현황(선택삭제)</td>
+            <td><a href="sub/Status_Status_Del03-2.html" target="_blank">Status_Status_Del03-2.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-배차중</td>
+            <td><a href="sub/Status_Dispatch.html" target="_blank">Status_Dispatch.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-배차중(서비스취소)</td>
+            <td><a href="sub/Status_Dispatch_Cancel01.html" target="_blank">Status_Dispatch_Cancel01.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-배차중(서비스취소)</td>
+            <td><a href="sub/Status_Dispatch_Cancel02.html" target="_blank">Status_Dispatch_Cancel02.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-픽업중</td>
+            <td><a href="sub/Status_Pickup.html" target="_blank">Status_Pickup.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-배송중</td>
+            <td><a href="sub/Status_Delivery.html" target="_blank">Status_Delivery.html</a></td>
+          </tr>
+
+          <tr>
+            <td>이용현황-배송완료</td>
+            <td><a href="sub/Status_Delivery_Completed.html" target="_blank">Status_Delivery_Completed.html</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <!-- //list_box -->
+
+  </div>
+  <!-- //list_wrap -->
+
+</body>
+
+</html>

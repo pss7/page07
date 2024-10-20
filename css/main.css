@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+#main{padding:0 0 36px;}
+#wrap{background: url(../images/main/main_bg.png)no-repeat center; background-size: cover;}
+
+/* header */
+#header{padding: 10px 0 9px;}
+
+/* footer */
+#footer{position: static; background-color: #F1F3F5;}
+
+/* section01 */
+#section01{margin-bottom: 10px;}
+#section01 a{display: block;}
+#section01 a img{display: block; width: 100%;}
+
+/* section02 */
+#section02{margin-bottom: 10px;}
+#section02 .statusTopBox{position: relative; }
+
+#section02 .statusTop .deliveryBarBox{margin-top: 28px; position: relative; display: flex; justify-content: space-between;}
+#section02 .statusTop .deliveryBarBox::after{content: ''; position: absolute; left:0; right: 0; bottom: -7px; height: 3px; background-color: #125CD9; z-index: 9;}
+#section02 .statusTop .deliveryBarBox span{display: block; position: relative; color: #fff; font-size: 11px; line-height: 14px; z-index: 99999;}
+#section02 .statusTop .deliveryBarBox span::before{content: ''; position: absolute; bottom: -10px; border-radius: 50px; width: 3px; height: 3px; border: 3px solid #125CD9; z-index: 999999; background-color: #337EFB;}
+#section02 .statusTop .deliveryBarBox span.origin::before{left:0;}
+#section02 .statusTop .deliveryBarBox span.active::before{border: 3px solid #5BF5FF;}
+#section02 .statusTop .deliveryBarBox span.destination::before{right:0;}
+#section02 .statusTop .deliveryBar{position: absolute; bottom: -7px; left:0; height: 3px; background-color: #5BF5FF; z-index: 9999; border-radius: 3px;}
+#section02 .statusTop .deliveryBar::after{content: ''; position: absolute; top:-30px; right:-15px; width: 30px; height: 27px; background: url(../images/sub/delivery_icon01.svg)no-repeat center; background-size: cover;}
+#section02 .statusTop .deliveryBarBox .statusText{width: 31px; height: 17px; line-height: 15px; position: absolute; top:-49px; right:-20px; color: #125CD9; font-weight: 600; font-size: 8px; background-color: #fff; border-radius: 50px; text-align: center; background: url(../images/sub/delivery_bg.svg)no-repeat center; background-size: cover;}
+#section02 .formBox{position: relative; border-radius: 17px; box-shadow: 0 18px 40px rgba(0, 31, 70, 0.25);}
+#section02 .formBox .border{height: 1px; background-color: #F4F5F7;}
+#section02 .formBox .inputTextBox{position: relative;}
+#section02 .formBox .inputTextBox::before{content: ''; position: absolute; top: 35px; left: 18px; width: 6px;
+    height: 6px; background: url(../images/sub/border_icon.svg) no-repeat center; background-size: cover;}
+#section02 .formBox .inputTextBox input{padding: 19px 17px 20px 37px; border-radius: 17px; color: #232A37;}
+#section02 .formBox .inputTextBox input::placeholder{font-weight: 600; color: #ACB0BB;}
+#section02 .formBox .inputTextBox.destination::before{background: #FF6508; border-radius: 50px;}
+#section02 .formBox .infoText{position: relative; padding: 0 13px; position: absolute; left:15px; bottom: -19px; height: 33px; line-height: 33px; background-color: #066AEB; border-radius: 10px; text-align: center; color: #fff; font-size: 12px; z-index: 99999;}
+#section02 .formBox.active{border: 2px solid #337EFB;}
+#section02 .formBox .infoText::after{content: ''; position: absolute; top:-8px; left:9px; width: 0;
+    height: 0; border-style: solid; border-width: 0px 8.5px 12px 8.5px; border-color: transparent transparent #066aeb  transparent;}
+#section02 .formBox .inputTextBox input:focus{border: 0!important;}
+#section02 .formBox .inputTextBox input:disabled{background-color: #fff;}
+#section02 .statusTop{ padding: 12px 17px 18px 18px; height: 161px; border-radius: 17px; /*box-shadow: 0 16px 30px rgba(0, 49, 131, 0.2);*/}
+#section02 .statusTop.quick{background-color: #337EFB;}
+#section02 .statusTop.parcel{position: relative; background-color: #35A181;}
+#section02 .statusTop.parcel::after{content: ''; width: 43px; height: 26px; position: absolute; right:16px; bottom: 19px; background: url(../images/sub/parcel_icon.svg)no-repeat center; background-size: cover;}
+#section02 .statusTop .text{margin-bottom: 4px; display: flex; gap:0 7px; align-items: center;}
+#section02 .statusTop .text .statusText{font-size: 13px; color: #fff; line-height: 29px;}
+#section02 .statusTop .text .deliveryStatus{display: block; width: 37px; height: 17px; line-height: 17px; text-align: center; border-radius: 33px; font-weight: 600; font-size: 10px; color: #fff;}
+#section02 .statusTop.quick .text .deliveryStatus{background-color: #2469DC;}
+#section02 .statusTop.parcel .text .deliveryStatus{background-color: #198968;}
+#section02 .statusTop .title{color: #fff; font-size: 18px;}
+#section02 .statusTop .title strong{font-weight: 600;}
+#section02 .statusTop .title span{font-size: 18px;}
+#section02 .statusTop .title .icon{position: relative; padding-left: 21px;}
+#section02 .statusTop .title .icon::before{content: ''; position: absolute; top: 2px; left:0; width: 17px; height: 17px; background: url(../images/sub/quick_icon.svg)no-repeat center; background-size: cover;} 
+
+/* section03 */
+#section03{margin-bottom: 10px;}
+#section03 a{position: relative; padding: 11px 10px 11px 18px; display: block; height: 57px;  border-radius: 17px; background-color: #fff;}
+#section03 a::after{content: ''; width: 5px; height: 9px; position: absolute; top: 24px; right:18px; background: url(../images/main/arrow_icon01.svg)no-repeat center; background-size: cover;}
+#section03 a p{position: relative;  padding:2px 0 0 44px;}
+#section03 a p::before{content: ''; position: absolute; top:1px; left:0; width: 34px; height: 34px;}
+#section03 a.parcel p::before{background: url(../images/main/parcel_icon.svg)no-repeat center; background-size: cover;}
+#section03 a.quick p::before{background: url(../images/main/quick_icon.svg)no-repeat center; background-size: cover;}
+#section03 a p span{display: block; color: #707881; font-size: 12px; font-weight: 500;}
+#section03 a p em{display: block; color: #232A37; font-weight: 500; font-size: 15px;} 
+
+/* section04 */
+#section04 .section04{padding: 15px 15px 0; background-color: #FCFFFF; border-radius: 17px; position: relative;}
+#section04 h2{margin-bottom: 14px; color: #232A37; font-size: 17px; font-weight: 600; line-height: 29px;}
+#section04 .serviceList{padding-bottom: 14px; display: flex; justify-content: center; gap: 0 31px; border-bottom: 1px solid #F5F7F9;}
+#section04 .serviceList li a{position: relative; display: block; text-align: center;}
+#section04 .serviceList li a .icon{display: block; margin: 0 auto; width: 67px; height: 67px;}
+#section04 .serviceList li a .icon.quickIcon{background: url(../images/main/service_quick_icon.svg)no-repeat center; background-size: cover;}
+#section04 .serviceList li a .icon.dayIcon{background: url(../images/main/service_day_icon.svg)no-repeat center; background-size: cover;}
+#section04 .serviceList li a .icon.parcelIcon{background: url(../images/main/service_parcel_icon.svg)no-repeat center; background-size: cover;}
+#section04 .serviceList li a em{display: block; color: #232A37; font-size: 15px; line-height: 29px;}
+#section04 .serviceList li a .statusText{position: absolute; top: -7px; right:3px; font-size: 8px; font-weight: 600;}
+#section04 .serviceList li a .statusText.delivery{padding:1.07px 0 0 1.4px; width: 31px; height: 16px; color: #CC0A0C; background: url(../images/main/delivery_bg.png)no-repeat; background-size: cover;}
+#section04 .serviceList li a .statusText.dispatch{padding: 1.07px 0 0 1.4px; width: 31px; height: 16px; color: #35A181; background: url(../images/main/dispatch_bg.png)no-repeat; background-size: cover;}
+#section04 .paymentBox{height: 50px; display: flex; align-items: center; gap: 0 60px; }
+#section04 .paymentBox a{position: relative; display: block;}
+#section04 .paymentBox a::after{content: ''; position: absolute; top:-2px; right:-39px;}
+#section04 .paymentBox a.service::after{width: 1px; height: 17px; background-color: #F5F7F9;}
+#section04 .paymentBox a:last-child:after{display: none;}
+#section04 .paymentBox a span{display: flex; color: #232A37; font-size: 13px; line-height: 1;}
+#section04 .paymentBox a span::before{content: ''; display: block;}
+#section04 .paymentBox a.service span{position: relative;}
+#section04 .paymentBox a.service span::before{margin:-1px 9px 0 0; width: 17px; height: 14px; background: url(../images/main/service_icon.svg)no-repeat center; background-size: cover;} 
+#section04 .paymentBox a.payment span::before{margin:-1px 8px 0 0; top: 2px; width: 17px; height: 17px; background: url(../images/main/payment_icon.svg)no-repeat center; background-size: cover;} 
+
+/* section05 */
+#section05{padding: 17px 0 25px;}
+#section05 .slick{width: 100%; overflow: hidden;}
+#section05 .noticeLink{display: flex; align-items: center; height: 29px; line-height: 1;}
+#section05 .noticeLink h3{position: relative; flex-shrink: 0; padding: 0 21px; font-size: 13px; font-weight: 600; color: #232A37;}
+#section05 .noticeLink h3::after{content: ''; position: absolute; top:1px; right:0; width: 1px; height: 11px; background-color: #D8DBDE;}
+#section05 .noticeLink .view{position: relative; width: 100%!important; display: block; padding:0 0 0 11px;}
+#section05 .noticeLink .view p{padding-right: 28px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #232A37; font-size: 13px;}
+#section05 .noticeLink .view::after{content: ''; width: 4px; height: 7px; position: absolute; top:3px; right:18px; background: url(../images/main/arrow_icon02.svg)no-repeat center; background-size: cover;}
+
+/* section06 */
+#section06 .infoLinkList a{margin-right: 12px; position: relative; display: block; width: 117px; height: 117px; padding: 16px 0 0 18px; background-color: #fff; border-radius: 17px;}
+#section06 .infoLinkList a::after{content: ''; position: absolute; bottom: 0; left:18px;}
+#section06 .infoLinkList a.infoAddress::after{bottom: 13px; width: 22px; height: 26px; background: url(../images/main/info_address_icon.svg)no-repeat center; background-size: cover;}
+#section06 .infoLinkList a.infoPayment::after{bottom: 16px; width: 29px; height: 21px; background: url(../images/main/info_payment_icon.svg)no-repeat center; background-size: cover;}
+#section06 .infoLinkList a.infoQuestion::after{bottom: 21px; width: 28px; height: 24px; background: url(../images/main/info_question_icon.svg)no-repeat center; background-size: cover;}
+#section06 .infoLinkList a .title{color: #000; font-weight: 600; font-size: 14px; line-height: 18px;}
+
+
+
+
+
+
+

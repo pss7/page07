@@ -1,0 +1,1140 @@
+@charset "UTF-8";
+
+.contentWrap{padding: 0 0 30px;}
+/* #main{height: 100vh; padding-bottom: 70px; overflow-y: auto;} */
+
+.textDelBtn{position: absolute; top: 50%; transform: translateY(-50%); right:19px; display: none; width: 19px; height: 19px; background: url(../images/sub/text_del_icon.svg)no-repeat center; background-size: cover;}
+
+/* 회색 배경색이 필요할 경우 */
+#wrap.webBg,
+#wrap.webBg #topTitleBox{background-color: #F4F6F9!important;}
+
+/* 공통-색상 */
+.mainColor{color: #066AEB;}
+
+/* 공통 - 팝업 */
+.commonPopup01{padding: 41px 17px 20px; /*height: 100vh;*/ position: fixed; left:0; right:0; bottom: 0; border-radius: 27px 27px 0 0; background-color: #fff; overflow-y: auto; transition: all .7s; z-index: 99999;}
+.commonPopup01 .title{margin-bottom: 24px; text-align: left; font-size: 20px; font-weight: 600; /*line-height: 29px;*/ line-height: 24px;}
+.commonPopup01 .agencyList li a{padding: 12px 0; display: block; line-height: 29px; font-weight: 500;}
+
+/* .commonPopup02.active{opacity: 1; z-index: 9999;} */
+.commonPopup02{/*opacity: 0; height: 100vh;*/ position: absolute; top: 0; left:0; right:0; bottom: 0; padding: 17px 17px 20px; border-radius: 17px 17px 0 0; z-index: 999; background-color: #fff; overflow-y: auto; transition: all .7s; /*z-index: -99;*/ z-index: 99999; overflow-x: hidden;}
+.commonPopup02 h1{margin-bottom: 36px; font-size: 17px; font-weight: 600; line-height: 21px; text-align: center;}
+.commonPopup02 h2{margin-bottom: 15px; font-weight: 600; font-size: 22px;}
+.commonPopup02 h3{line-height: 29px; font-size: 12px; font-weight: 400;}
+.commonPopup02 p{margin-bottom: 15px; font-size: 12px; line-height: 17px;}
+.popupClose{position: absolute; top:13px; right:17px; width: 15px; height: 15px; background: url(../images/sub/popupclose_icon.svg)no-repeat; background-size: cover;}
+.popupClose02{position: absolute; top:15px; right:18px; width: 23px; height: 23px; background: url(../images/sub/popupclose_icon02.svg)no-repeat; background-size: cover;}
+.commonPopup02 #popupHeader{position: relative; margin-top: -17px; position: sticky; top: -17px; height: 53px; display: flex; align-items: center; justify-content: space-between; z-index: 99; background-color: #fff;}
+.commonPopup02 #popupHeader::before{content: ''; position: absolute; bottom: 0; left:-100%; right:-100%; border-bottom: 1px solid #EDEFF2;}
+.commonPopup02 #popupHeader h1{margin-bottom: 0; font-size: 17px;}
+.commonPopup02 #popupHeader button.saveBtn{color:#066AEB;}
+.commonPopup02 #popupHeader button:disabled{color: #ACB0BB; background-color: #fff!important;}
+.commonPopup02 .delBox{position: relative; padding: 39px 0 17px; display: flex; align-items: center; justify-content: space-between;}
+.commonPopup02 .delBox::after{content: ''; position: absolute; left:-100%; right:-100%; bottom: 0; height: 1px; background-color: #EDEFF2;}
+.commonPopup02 .delBox .allDelBox{display: flex; align-items: center;}
+.commonPopup02 .delBox .allDelBox input:checked + label::before{border: 0; background-color: #066AEB;}
+.commonPopup02 .delBox .allDelBox input:checked + label::after{content: ''; position: absolute; top:4px; left:6px; width: 11px; height: 8px; background: url(../images/sub/check_icon01.svg)no-repeat center; background-size: cover;} 
+.commonPopup02 .delBox .allDelBox label::before{content: ''; position: absolute; top: -4px; left:0; width: 23px; height: 23px; border: 1px solid #E0E4EB; border-radius: 50px;}
+.commonPopup02 .delBox .allDelBox label{position: relative; padding-left: 32px; font-weight: 500; font-size: 15px; line-height: 18px;}
+.commonPopup02 .delBox .delNum{color: #FF6060; line-height: 18px;}
+
+/* 공통-직접입력하기 */
+.checkInputBox{display: none;}
+
+/* 공통-온,오프 */
+.modeBox{padding: 2px; display: flex; align-items: center; width: 45px; height: 26px; border-radius: 50px;}
+.modeBox.on{background-color: #066AEB;}
+.modeBox.on .offBtn{opacity: 0; flex-shrink: initial;}
+.modeBox.off{background-color: #E9E9EA;}
+.modeBox.off .onBtn{opacity: 0; flex-shrink: initial;}
+.modeBox.off .offBtn{opacity: 1; flex-shrink: initial;}
+.modeBox button{flex-shrink: 0; display: block; width: 22px; height: 22px; border-radius: 50px; background-color: #fff;}
+
+/* 공통 - 탭 */
+.tab{display: flex;}
+.tab li{flex: 1;}
+.tab li a{display: block; padding-bottom: 13px; color: #9CA2AD; font-weight: 500; text-align: center;}
+.tab li a.active{border-bottom: 2px solid #11141B; color: #11141B;}
+
+/* 공통 - 텍스트 */
+.text01{margin:11px 0 28px; font-size: 24px; font-weight: 600;}
+.text01 span{display: block; margin-top: 5px; font-weight: 400; font-size: 16px;}
+
+/* 공통 - 테두리 */
+.border{position: relative; padding-bottom: 7px;}
+.border::after{content: '';position: absolute; left:-100%; right:-100%; bottom: 0; border-bottom: 7px solid #F7F7F8;}
+.borderTop{position: relative; height: 1px;}
+.borderTop::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; border-top: 1px solid #E9EBEE;}
+
+/* 헤더 */
+#topTitleBox{position: sticky; top:0; left:0; right:0; padding: 18px 0 25px; background-color: #fff; z-index: 99;}
+#topTitleBox .prevPage{position: absolute; top:50%; transform: translateY(-50%); left:0; width: 21px; height: 17px; background: url(../images/common/prevpage_icon.svg)no-repeat; background-size: cover;}
+#topTitleBox .topTitleBox{height: 21px; position: relative; display: flex; align-items: center; justify-content: center;}
+#topTitleBox h1{text-align: center; font-size: 17px;}
+#topTitleBox .topText{position: absolute; right:0; top: 50%; transform: translateY(-50%); font-size: 15px;}
+#topTitleBox.topTitleBoxSt{/*padding: 14px 0 25px;*/ padding: 18px 0 14px;}
+#topTitleBox.topTitleBoxSt .topTitleBox{height: 12px;}
+#topTitleBox.topTitleBoxSt .prevPage{width: 17px; height: 12px;}
+
+/* 내정보-공지사항/이벤트 */
+.commonList li a{display: block; padding:17px 23px 18px 0; border-bottom: 1px solid #F3F4F5; font-size: 15px;} 
+.commonList li a p{margin-bottom: 7px; font-size: 15px;}
+.commonList li a span{font-size: 12px; color: #6E7175;}
+.commonList li a.link{position: relative;}
+.commonList li a.link::after{content: ''; width: 5px; height: 9px; position: absolute; top:50%; transform: translateY(-50%); right:0; background: url(../images/sub/link_icon.svg)no-repeat; background-size: cover;}
+.TopTitle{margin-bottom: 21px; padding:0 120px 18px 0; border-bottom: 1px solid #F3F4F5;}
+.TopTitle h2{margin-bottom: 6px; font-weight: 600; font-size: 21px; line-height: 1.2;}
+.TopTitle span{color: #6E7175; font-size: 12px;}
+.detailTextBox .detailText{font-size: 15px;}
+.detailImageBox{margin-bottom: 17px;}
+.detailImageBox img{display: block; width: 100%;}
+
+/* 내정보-고객센터 */
+.serviceCenterWrap{padding: 25px 0 0;}
+.serviceCenterWrap .tab02{position: relative; display: flex; flex-wrap: wrap; gap: 5px; padding-bottom: 23px;}
+.serviceCenterWrap .tab02 li a{display: block; padding: 8px 15px; border-radius: 33px; background-color: #F7F8F9; color: #484E58; font-size: 14px;} 
+.serviceCenterWrap .tab02 li a.active{background-color: #11141B; font-weight: 500; color: #F3F7FF;}
+.serviceCenterWrap .TopTitle{padding-right: 0; padding-bottom: 25px; margin-bottom: 0; border-bottom: 0;}
+.serviceCenterWrap .TopTitle h2{margin-bottom: 2px;}
+.serviceCenterWrap .TopTitle .inquiryEmail span{display: block; margin-bottom: 6px; color: #9CA2AD; font-size: 14px; }
+.serviceCenterWrap .TopTitle .inquiryEmail em{display: block; font-size: 18px; color: #11141B;}
+.serviceCenterWrap .inquiry{position: relative; display: block; padding: 27px 0;}
+.serviceCenterWrap .inquiry span{position: relative; padding-left: 40px; font-size: 15px;}
+.serviceCenterWrap .inquiry span::before{content: ''; width: 27px; height: 20px; position: absolute; top:0; left:0; background: url(../images/sub/inquiry_icon.svg)no-repeat; background-size: cover;}
+.serviceCenterWrap .inquiry::after{content: ''; width: 5px; height: 9px; position: absolute; top:50%; right:0; transform: translateY(-50%); background: url(../images/sub/linkarrow_icon.svg)no-repeat; background-size: cover;}
+.serviceCenterWrap .formBox .inputTextBox{margin-bottom: 7px;}
+.serviceCenterWrap .formBox .inputTextBox input{padding: 16px 17px 16px 16px; font-size: 15px; border: 1px solid #E6E8EC;}
+.serviceCenterWrap .formBox .inputTextBox input::placeholder{color: #ACB0BB;}
+.serviceCenterWrap .formBox{margin-top: 24px; border: 0;}
+.commonList02 li a{display: block; position: relative; padding: 20px 42px 20px 0; border-bottom: 1px solid #F3F4F5; font-size: 15px; }
+.commonList02 li a::after{content: ''; width: 5px; height: 9px; position: absolute; top:50%; right:0; transform: translateY(-50%); background: url(../images/sub/linkarrow_icon.svg)no-repeat; background-size: cover;}
+
+/* 내정보-이용약관 */
+.policyWrap{margin-top: -14px;}
+.policyWrap .commonPopup01{top: 41px;}
+/* .policyWrap .bg{background-color: rgba(0,0,0,.1);} */
+
+/* 내정보 */
+/* .myInfoWrap{padding: 25px 0 0;} */
+.myInfoWrap .myInfoBox .myInfoTop .myInfo{margin-bottom: 11px; position: relative; display: flex; align-items: center; gap:12px;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .imgBox{width: 57px; height: 57px; border-radius: 33px; overflow: hidden;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .textBox .name{font-size: 18px; font-weight: 600; line-height: 1.6;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .textBox .number{color: #6E7175; font-size: 12px;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .management{position: absolute; top: 50%; transform: translateY(-50%); right:0; width: 55px; height: 27px; line-height: 27px; border-radius: 33px; background-color: #0068FF; font-weight: 500; font-size: 12px; color: #fff; text-align: center;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .management span{position: relative; padding-right: 13px;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .management span::after{content: ''; width: 5px; height: 8px; position: absolute; right:0; top: 50%; transform: translateY(-50%); background: url(../images/sub/management_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoTop{position: relative; padding: 19px 0 23px; z-index: 1;}
+.myInfoWrap .myInfoBox .myInfoTop::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; background-color: #F4F6F9; bottom: 0; z-index: -1;}
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .textBox .name,
+.myInfoWrap .myInfoBox .myInfoTop .myInfo .textBox .number{display: block;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox{height: 56px; display: flex; align-items: center; background-color: #fff; border-radius: 17px;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a{position: relative; display: block; width: 50%; color: #232A37; font-size: 13px; text-align: center;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a.payment::after{content: ''; position: absolute; top:0; right:0; width: 1px; height: 17px; background-color: #EDEFF1;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a span{position: relative; padding-left: 33px;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a span::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a.payment span::before{width: 24px; height: 24px; background: url(../images/sub/payment_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoTop .managementBox a.coupon span::before{width: 24px; height: 19px; background: url(../images/sub/coupon_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoLinkBox{padding: 23px 0 24px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a{position: relative; padding: 17px 0; display: block; line-height: 1.2;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a span{position: relative; font-size: 15px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a span::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a::after{content: ''; width: 5px; height: 9px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: url(../images/sub/linkarrow_icon.svg) no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.noticeLink span{padding-left: 33px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.noticeLink span::before{width: 18px; height: 18px; background: url(../images/sub/noticelink_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.serviceCenterLink span{padding-left: 33px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.serviceCenterLink span::before{width: 20px; height: 18px; background: url(../images/sub/servicecenterlink_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.settingLink span{padding-left: 33px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .myInfoList li a.settingLink span::before{width: 18px; height: 18px; background: url(../images/sub/settinglink_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .infoImgBox{margin-bottom: 6px;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .infoImgBox img{display: block; width: 100%;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .appVersionBox{display: flex; align-items: center; justify-content: space-between;}
+.myInfoWrap .myInfoBox .myInfoLinkBox.myInfoLinkBoxPd{padding: 14px 0 0;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .appVersionBox{padding: 17px 0; line-height: 1.2;}
+.myInfoWrap .myInfoBox .myInfoLinkBox .appVersionBox span{font-size: 15px; }
+.myInfoWrap .myInfoBox .myInfoLinkBox .appVersionBox em{font-size: 12px; color: #AEB1B4;}
+
+/* 내정보-개인정보(개인) */
+.myInfoWrap .myInfoBox .profileBox{padding:17px 0 30px;}
+.myInfoWrap .myInfoBox .profileBox .profileImgBox{position: relative; width: 80px; height: 80px; margin: 0 auto 3px;}
+.myInfoWrap .myInfoBox .profileBox .profileImgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.myInfoWrap .myInfoBox .profileBox .profileImgBox a{position: absolute; bottom: 0; right:-8px;display: block; width: 28px; height: 28px; background: url(../images/sub/profile_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .myInfoBox .profileBox .name{display: block; font-size: 18px; text-align: center; font-weight: 600; line-height: 29px;} 
+.myInfoWrap .myInfoBox .profileInfoText{padding: 29px 0 30px;}
+.myInfoWrap .myInfoBox .profileInfoText h2{margin-bottom: 27px; font-weight: 600; font-size: 16px;}
+.myInfoWrap .myInfoBox .profileInfoText .profileInfoList li{margin-bottom: 25px; display: flex; align-items: center; line-height: 1.2;}
+.myInfoWrap .myInfoBox .profileInfoText .profileInfoList li:last-child{margin-bottom: 0;}
+.myInfoWrap .myInfoBox .profileInfoText .profileInfoList li span{flex-shrink: 0; width: 88px; color: #6E7175; font-size: 15px;}
+.myInfoWrap .myInfoBox .profileInfoText .profileInfoList li .text{font-size: 15px;}
+.myInfoWrap .correctionBtn{margin-left: auto; width: 37px; height: 22px; line-height: 22px; border-radius: 33px; text-align: center; background-color: #F7F8F9; color: #066AEB; font-size: 11px;}
+.myInfoWrap .myInfoBox .profileInfoText.profileInfoTextPd{padding: 26px 0 0;}
+.myInfoWrap .myInfoBox .profileInfoText .addBox{display: flex; align-items: center; line-height: 1.2;}
+.myInfoWrap .myInfoBox .profileInfoText .addBox span{flex-shrink: 0; width: 90px; font-size: 15px; color: #6E7175;}
+.myInfoWrap .myInfoBox .profileInfoText .addBox .addBtn{position: relative; padding-left: 13px; font-size: 15px; color: #066AEB;}
+.myInfoWrap .myInfoBox .profileInfoText .addBox .addBtn::before{content: ''; position: absolute; top:4px; left:0; width: 9px; height: 9px; background: url(../images/sub/add_icon.svg)no-repeat; background-size: cover;}
+
+/* 내정보-설정 */
+.myInfoWrap .settingWrap{margin: 0 -18px; padding: 0 18px; position: relative; background-color: #fff;}
+.myInfoWrap .settingWrap .settingBox{padding: 24px 0 12px;}
+.myInfoWrap .settingWrap .settingBox .title{display: block; margin-bottom: 12px; color: #6E7175; font-size: 15px; line-height: 1;}
+.myInfoWrap .settingWrap .settingBox .box{display: flex; justify-content: space-between;  padding: 12px 0;}
+.myInfoWrap .settingWrap .settingBox .box a{display: block; width: 100%; }
+.myInfoWrap .settingWrap a.link{position: relative;}
+.myInfoWrap .settingWrap a.link::after{content: ''; position: absolute; top: 50%;
+    right: 0; transform: translateY(-50%); background: url(../images/sub/linkarrow_icon.svg) no-repeat; background-size: cover; width: 5px; height: 9px;}
+ .myInfoWrap .settingWrap .settingBox .box.timeBox{margin-top: 12px; padding: 24px 0 12px; justify-content: space-between; border-top: 1px solid #F3F4F5;}
+ .myInfoWrap .settingWrap .settingBox .box.timeBox .time{color: #9CA2AD;}
+ .myInfoWrap .settingWrap .settingBox .box.timeBox .date{font-size: 15px; color: #6E7175;}
+ .myInfoWrap .settingWrap .settingBox .box .textBox span{display: block; margin-bottom: 5px; line-height: 19px;}
+ .myInfoWrap .settingWrap .settingBox .box .textBox p{color: #9CA2AD; font-size: 13px; line-height: 15px;}
+ .myInfoWrap .settingWrap .secessionLink{ display: block; padding: 24px 0;}
+ .myInfoWrap .settingWrap .logoutLink{position: relative; padding: 20px 0; display: block; color: #6E7175; font-size: 14px; line-height: 17px; z-index: 1;}
+ .myInfoWrap .settingWrap .logoutLink::after{content: ''; position: absolute; top:0; left: -100%; right: -100%; bottom: 0; background-color: #F7F7F8; z-index: -1;} 
+
+ /* 내정보-비밀번호틀림 */
+ .myInfoWrap .inputTextBox.error input{border: 2px solid #FB3C3C;}
+ .myInfoWrap .inputTextBox.error .errorText{position: absolute; left:8px; bottom: -29px; width: 195px; height: 33px; line-height: 33px; font-size: 12px; color: #fff; text-align: center; background-color: #FB3C3C; border-radius: 10px;}
+ .myInfoWrap .inputTextBox.error .errorText::before{content: ''; position: absolute; top:-8px; left:11px; width: 0; height: 0; border-style: solid; border-width: 0 8.5px 13px 8.5px; border-color: transparent transparent #FB3C3C transparent;}
+
+ /* 내정보-개인정보주소검색 */
+.myInfoWrap .searchResultBox{margin-top: 18px;}
+.myInfoWrap .sarchBox input{border-radius: 13px;}
+
+/* 회원가입-휴대폰인증-통신사선택 */
+.agencyCommonPopup{height: 443px;}
+
+/* 회원가입-휴대폰인증-약관동의 */
+.agreeCommonPopup{min-height: 280px;}
+.agreeCommonPopup .agreeList02{display: none; margin-left: 16px;}
+.agreeCommonPopup .agreeList02 li{margin-bottom: 9px;}
+.agreeCommonPopup .agreeList02 li label::after{transform: rotate(-90deg);}
+.agreeCommonPopup .agreeList01{margin-bottom: 29px;}
+.agreeCommonPopup .agreeList01 li{line-height: 29px;}
+.agreeCommonPopup .agreeList01 li .agreeBox{margin-bottom: 9px;}
+.agreeCommonPopup .agreeList01 li .agreeBox label.active::after{transform: rotate(180deg);}
+.agreeCommonPopup .agreeList01 li input[type="checkbox"]{display: none;}
+.agreeCommonPopup .agreeList01 li input:checked + label::before{background: url(../images/sub/checkactive_icon.svg)no-repeat; background-size: cover;}
+.agreeCommonPopup .agreeList01 li label{position: relative; display: block; padding-left: 33px; font-size: 14px; font-weight: 500; color: #6E7175; cursor: pointer;}
+.agreeCommonPopup .agreeList01 li label::before{content: ''; position: absolute; top:8px; left:0; width: 16px; height: 11px; background: url(../images/sub/check_icon.svg)no-repeat; background-size: cover;}
+.agreeCommonPopup .agreeList01 li label::after{content: ''; position: absolute; top:11px; right: 0; background: url(../images/sub/check_arrow.svg)no-repeat; background-size: cover; width: 11px; height: 6px;}
+
+/* 회원가입-휴대폰인증-인증번호 */
+.CertifiCommonPopup{height: 227px;}
+.CertifiCommonPopup .CertifiWrap span{display: block; margin-bottom: 5px; font-size: 12px; line-height: 1;}
+.CertifiCommonPopup .CertifiWrap .CertifiBox{position: relative;  padding-bottom: 6px; border-bottom: 2px solid #11141B; border-width: 0 0 2px;}
+.CertifiCommonPopup .CertifiWrap .CertifiBox input{display: block; width: 100%; height: 29px; border: 0;}
+.CertifiCommonPopup .CertifiWrap .CertifiBox .certifiBtn{width: 60px; height: 31px; line-height: 31px;position: absolute; top: -2px; right:0; border: 1px solid #C7CCD1; border-radius: 33px; text-align: center; font-size: 14px; background-color: #fff; font-weight: 500;} 
+.CertifiCommonPopup .CertifiWrap .CertifiBox .number{display: block; position: absolute; top: 8px; right:71px; color: #007EFF; font-size: 12px;}
+
+/* 회원가입-회원구분 */
+.joinWrap .divisionWrap .divisionList{margin-top: 57px; display: flex; gap: 34px; justify-content: center;}
+.joinWrap .divisionWrap .divisionList li a{position: relative; display: block; text-align: center;}
+.joinWrap .divisionWrap .divisionList li a .icon{position: relative; display: block; margin-bottom: 6px; width: 97px; height: 96px; border-radius: 50px; background-color: #F7F7F7;}
+.joinWrap .divisionWrap .divisionList li a .icon::after{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.joinWrap .divisionWrap .divisionList li a.individual .icon::after{width: 62px; height: 61px; background: url(../images/sub/individual_icon.svg)no-repeat; background-size: cover;}
+.joinWrap .divisionWrap .divisionList li a.enterprise .icon::after{left: 54%; width: 36px; height: 56px; background: url(../images/sub/enterprise_icon.svg)no-repeat; background-size: cover;}
+.joinWrap .divisionWrap .divisionList li a span{display: block; font-size: 17px; line-height: 29px; font-weight: 500;}
+
+/* 주소검색 */
+.sarchBox{position: relative;  }
+.sarchBox .searchBtn{width: 52px; height: 100%; position: absolute; top: 50%; left:0; transform: translateY(-50%); z-index: 9;}
+.sarchBox .searchBtn::after{content: ''; width: 14px; height: 14px; position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%); background: url(../images/sub/search_icon.svg)no-repeat; background-size: cover;}
+.sarchBox{margin-bottom: 19px; }
+.sarchBox input{height: 47px; padding: 14px 10px 13px 52px; display: block; width: 100%; border-radius: 50px; background-color: #F5F6F7; border: 0;}
+.sarchBox input::placeholder{color: #7E8082;}
+.searchInfoText{margin-top: 19px;}
+.searchInfoText span{font-size: 14px; font-weight: 600; line-height: 29px;}
+.searchInfoText .searchInfoList li{position: relative; padding-left: 8px; font-size: 12px; color: #5C5F63; line-height: 19px;}
+.searchInfoText .searchInfoList li::before{content: ''; position: absolute; top:7px; left:0; width: 3px; height: 3px; background-color: #5C5F63; border-radius: 50px;}
+.sarchBox input:focus{padding: 11px 10px 12px 52px; background-color: #fff!important;}
+.searchResultBox{margin-top: 25px;}
+.searchResultBox .resultBox{margin-bottom: 17px;}
+.searchResultBox .resultBox .resultText{display: block; color: #5C5F63; font-size: 14px; line-height: 29px;}
+.searchResultBox .resultBox .result{padding: 13px 0; border-bottom: 1px solid #F3F4F5;}
+.searchResultBox .resultBox .result .box .color{color: #066AEB;}
+.searchResultBox .resultBox .result .box{padding-right: 45px; position: relative;}
+.searchResultBox .resultBox .result .box .rsultText01{line-height: 29px;}
+.searchResultBox .resultBox .result .box .rsultText02{font-size: 14px;}
+.searchResultBox .resultBox .result .box .selectBtn{position: absolute; top:50%; right:0; transform: translateY(-50%); width: 38px; height: 31px; line-height: 31px; border-radius: 7px; text-align: center; border: 1px solid #DCE0E8; font-size: 12px;}
+
+/* 회원가입-회원가입 완료 */
+.joinWrap .completeWrap{padding: 75px 0 0;}
+.joinWrap .completeWrap .title{text-align: center; font-size: 25px; font-weight: 600; line-height: 36px;}
+.joinWrap .completeWrap .subText{margin-bottom: 76px; color: #737679; line-height: 36px; text-align: center;}
+.joinWrap .completeWrap img{display: block; margin: 0 auto; width: 252px;}
+.layoutWrap{height: 100vh; display: flex; flex-direction: column; }
+.layoutWrap .combtn{margin-top: auto;}
+.joinWrap .enterpriseWrap .completeWrap .subText{margin-bottom: 47px;}
+.joinWrap .enterpriseWrap .completeWrap .title{margin-bottom: 12px; font-size: 22px; line-height: 31px;}
+.joinWrap .enterpriseWrap .completeWrap .subText{line-height: 22px;}
+.joinWrap .enterpriseWrap .completeWrap .subText .color{color: #066AEB;}
+.joinWrap .enterpriseWrap .completeWrap .view{ display: block; margin: auto 0 25px; text-align: center;}
+.joinWrap .enterpriseWrap .completeWrap .view span{position: relative; padding-right: 19px; font-weight: 500; font-size: 14px; line-height: 31px;}
+.joinWrap .enterpriseWrap .completeWrap .view span::after{content: ''; position: absolute; top:2px; right:0; width: 6px; height: 11px; background: url(../images/sub/view_icon.svg)no-repeat; background-size: cover;}
+.joinWrap .enterpriseWrap .completeWrap .view + .combtn{margin-top: 0;}
+
+.authorityView{ display: block; margin: auto 0 25px; text-align: center;}
+.authorityView span{position: relative; padding-right: 19px; font-weight: 500; font-size: 14px; line-height: 31px;}
+.authorityView span::after{content: ''; position: absolute; top:2px; right:0; width: 6px; height: 11px; background: url(../images/sub/view_icon.svg)no-repeat; background-size: cover;}
+.authorityView + .combtn{margin-top: 0;}
+
+/* 회원가입-개인회원-주소상세 */
+.joinWrap .divisionWrap .searchDetailWrap .text01{margin: 11px 0 21px;}
+
+/* 회원가입-개인회원-약관상세 */
+.joinWrap .commonPopup02 .popupClose{top: 21px;}
+.joinWrap .commonPopup02 h1{margin-bottom: 34px;}
+
+/* 로그인 */
+.login #topTitleBox{background-color: #F3F4F5; z-index: 9;}
+.login .loginWrap{position: relative; z-index: 1;}
+.loginWrap .deliveryService{margin: 34px auto 0; padding: 17px 15px 0 21px; width: 293px; height: 178px; background-color: #fff; border-radius: 27px;}
+.loginWrap .deliveryService span{margin-bottom: 3px; display: block; line-height: 20px; color: #B8BFC8; font-weight: 600; font-size: 17px;}
+.loginWrap .deliveryService .layoutBox{display: flex; align-items: center; justify-content: flex-end; gap: 0 8px;}
+.loginWrap .deliveryService .layoutBox em{display: block; width: 53px; height: 30px; border-radius: 33px; background-color: #ECEEF0;}
+.loginWrap .deliveryService .deliveryIconList{margin-top: 20px;}
+.loginWrap .deliveryService .deliveryIconList img{display: block; width: 98%;}
+.loginWrap h2{padding-top: 40px; margin-bottom: 11px; font-size: 23px; font-weight: 600; line-height: 33px; text-align: center;}
+.loginWrap .subText{text-align: center; }
+.loginWrap .subText span{padding-left: 17px; position: relative; color: #2F3543; font-size: 17px; line-height: 23px;}
+.loginWrap .subText span::before{content: ''; position: absolute; top:0; left:0; width: 14px; height: 20px; background: url(../images/sub/lightning_icon.svg)no-repeat; background-size: cover;} 
+.loginWrap .loginLink{margin-top: 88px;}
+.loginWrap .loginLink li{margin-bottom: 10px;}
+.loginWrap .loginLink li a{display: flex; justify-content: center; height: 57px; line-height: 57px; border-radius: 50px;}
+.loginWrap .loginLink li a span{position: relative; font-weight: 500; font-size: 18px;}
+.loginWrap .loginLink li a span::before{content: ''; position: absolute; top:7px; left:0;}
+.loginWrap .loginLink li a.kakao span{padding-left: 33px;}
+.loginWrap .loginLink li a.kakao span::before{top: 20px; width: 22px; height: 20px; background: url(../images/sub/kakao_icon.svg)no-repeat; background-size: cover;}
+.loginWrap .loginLink li a.naver span{padding-left: 28px;}
+.loginWrap .loginLink li a.naver span::before{top: 20px; width: 18px; height: 18px; background: url(../images/sub/naver_icon.svg)no-repeat; background-size: cover}
+.loginWrap .loginLink li a.google span{padding-left: 29px;}
+.loginWrap .loginLink li a.google span::before{top: 18px; width: 20px; height: 20px; background: url(../images/sub/google_icon.svg)no-repeat; background-size: cover}
+.loginWrap .loginLink li a.kakao{background-color: #FFEB00;}
+.loginWrap .loginLink li a.kakao span{ color: #030812;}
+.loginWrap .loginLink li a.naver{background-color: #00C300;}
+.loginWrap .loginLink li a.naver span{color: #fff;}
+.loginWrap .loginLink li a.google{background-color: #fff; border: 1px solid #11141B;}
+.loginWrap .loginLink li a.google span{color: #11141B;}
+.loginWrap .emailLink{display: block; text-align: center; line-height: 31px;}
+.loginWrap .emailLink span{position: relative; font-weight: 500; font-size: 17px;}
+.loginWrap .emailLink span::after{content: ''; height: 1px; position: absolute; left:0; right:0; bottom: 0; background-color: #11141B;}
+.loginWrap .loginSelect{display: flex; justify-content: space-between; margin-top: 21px; line-height: 29px; }
+.loginWrap .loginSelect .loginCheck label{padding-left: 29px; position: relative; color: #4E5055; font-size: 15px; }
+.loginWrap .loginSelect .loginCheck label::before{content: ''; position: absolute; top: 2px; left: 0; width: 16px; height: 11px; background: url(../images/sub/check_icon.svg) no-repeat; background-size: cover;}
+.loginWrap .loginSelect .loginCheck input:checked + label::before{background: url(../images/sub/checkactive_icon.svg) no-repeat; background-size: cover;}
+.loginWrap .loginSelect a{display: block; color: #6E7175; font-size: 15px;}
+
+/* 내정보-개인정보(기업) */
+.myInfoWrap .profileInfoText02{position: relative;}
+.myInfoWrap .profileInfoText02 .correctionBtn{position: absolute; top:26px; right:0;}
+
+/* 내정보-결제관리 */
+.myInfoWrap .paymentWrap .paymentList li{position: relative; height: 93px; margin-bottom: 7px; padding: 18px 14px 15px 16px; display: flex; background-color: #fff; border-radius: 13px; line-height: 1;}
+.myInfoWrap .paymentWrap .paymentList li .imgBox{width: 33px; height: 33px; margin-right: 12px;}
+.myInfoWrap .paymentWrap .paymentList li .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.myInfoWrap .paymentWrap .paymentList li .textBox .title{margin-bottom: 5px;}
+.myInfoWrap .paymentWrap .paymentList li .textBox h2{display: flex; align-items: center; font-weight: 600; font-size: 15px;}
+.myInfoWrap .paymentWrap .paymentList li .textBox h2 .paymentText{margin-left: 7px; padding: 3px 8px; background-color: #11141B; border-radius: 33px; color: #fff; font-size: 12px;}
+.myInfoWrap .paymentWrap .paymentList li .textBox p{margin-bottom: 8px; color: #484E58; font-size: 13px; }
+.myInfoWrap .paymentWrap .paymentList li .textBox .box{display: flex; align-items: center; gap: 12px;}
+.myInfoWrap .paymentWrap .paymentList li .textBox .box span{color: #6E7175; font-size: 12px;}
+.myInfoWrap .paymentWrap .paymentList li .textBox .box .text{position: relative;}
+.myInfoWrap .paymentWrap .paymentList li .textBox .box .text::after{content: ''; width: 2px; height: 2px; position: absolute; top:5px; right:-7px; background-color: #B9BEC4; border-radius: 50px;}
+.myInfoWrap .paymentWrap .paymentView{position: relative; display: block; height: 67px; border-radius: 13px; background-color: #fff;}
+.myInfoWrap .paymentWrap .paymentView::after{content: '';  width: 13px; height: 13px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/sub/paymentview_icon.svg)no-repeat; background-size: cover;}
+.myInfoWrap .paymentWrap .paymentList li .settingBtn{width: 3px; height: 14px; position: absolute; top:13px; right:14px; background: url(../images/sub/setting_icon.svg)no-repeat; background-size: cover;}
+.bgCommonPopup{padding: 20px 17px 18px; background-color: #F4F6F9; border-radius: 17px 17px 0 0;}
+.bgCommonPopup a{padding: 15.3px 5px; display: block; font-size: 15px; background-color: #fff;  border-radius: 17px; text-align: center;}
+.bgCommonPopup .popupPaymentList{margin-bottom: 15px;}
+.bgCommonPopup .popupPaymentList li:nth-child(1) a{border-radius: 17px 17px 0 0; border-bottom: 1px solid #F4F6F9;}
+.bgCommonPopup .popupPaymentList li:nth-child(2) a{border-radius: 0 0 17px 17px;}
+.bgCommonPopup .popupPaymentList02{display: flex; flex-wrap: wrap; gap: 5px 1.47%;}
+.bgCommonPopup .popupPaymentList02 li{width: 49.2%;}
+.bgCommonPopup .popupPaymentList02 li a{padding: 15.3px 5px 15.3px 17px; border-radius: 17px!important; border-bottom: 0!important; text-align: left;}
+.bgCommonPopup .popupPaymentList02 li a span{padding-left: 31px; position: relative;}
+.bgCommonPopup .popupPaymentList02 li a span::before{content: ''; position: absolute; top:0; left:0; }
+.bgCommonPopup .popupPaymentList02 li a.card01 span::before{ width: 22px; height: 17px;background: url(../images/sub/card_icon01.svg)no-repeat; background-size: cover;}
+.bgCommonPopup .popupPaymentList02 li a.card02 span::before{width: 22px; height: 17px; background: url(../images/sub/card_icon02.svg)no-repeat; background-size: cover;}
+.bgCommonPopup .popupPaymentList02 li a.card03 span::before{top:2px; width: 22px; height: 15px; background: url(../images/sub/card_icon03.svg)no-repeat; background-size: cover;}
+.bgCommonPopup .popupPaymentList02 li a.card04 span::before{top:2px; width: 22px; height: 15px; background: url(../images/sub/card_icon04.svg)no-repeat; background-size: cover;}
+
+.myInfoWrap .paymentCommonPopup02 h1{margin-bottom: 21px;}
+.myInfoWrap .paymentCommonPopup02 p{margin-bottom: 18px; color: #ACB0BB; font-size: 13px; text-align: center;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList{display: flex; align-items: center; flex-wrap: wrap; gap: 7px 2.2%;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li{width: 48.9%;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a{display: flex; align-items: center;
+   justify-content: space-between; padding: 0 13px 0 16px;height: 57px; line-height: 57px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a span{display: block;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a img{display: block; width: 100%; height: 100%;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a .text{font-size: 15px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.nonghyup .icon{width: 17px; height: 20px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.gugmin .icon{width: 28px; height: 20px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.kakao .icon{width: 21px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.shinhan .icon{width: 22px; height: 22px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.enterprise .icon{width: 24px; height: 23px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.uli .icon{width: 22px; height: 22px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.im .icon{width: 22px; height: 11px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.hana .icon{width: 23px; height: 24px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.saemaeul .icon{width: 23px; height: 20px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.bnk .icon{width: 24px; height: 7px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.post .icon{width: 26px; height: 13px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.gwangju .icon{width: 21px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.sc .icon{width: 14px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.sinhyeob .icon{width: 24px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.kBank .icon{width: 21px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.city .icon{width: 25px; height: 14px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.sh .icon{width: 21px; height: 15px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.jeonbug .icon{width: 21px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.jeju .icon{width: 22px; height: 22px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.industry .icon{width: 22px; height: 19px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.sbi .icon{width: 29px; height: 17px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.nh .icon{width: 17px; height: 21px;}
+.myInfoWrap .paymentCommonPopup02 .paymentSelectList li a.toss .icon{width: 23px; height: 21px;}
+
+/* 내정보-쿠폰관리 */
+.myInfoWrap .couponWrap .couponText{display: block; margin-bottom: 11px; color: #484E58; font-size: 13px; line-height: 16px;}
+.myInfoWrap .couponWrap .couponList li{position: relative; padding: 18px 109px 25px 17px; margin-bottom: 7px; height: 115px; background-color: #fff; border-radius: 13px;}
+.myInfoWrap .couponWrap .couponList li .price{display: block; margin-bottom: 10px; color: #FE5F3C; font-weight: 600; font-size: 22px; line-height: 26px;}
+.myInfoWrap .couponWrap .couponList li em{display: block; margin-bottom: 4px; font-weight: 600; font-size: 15px; line-height: 18px;}
+.myInfoWrap .couponWrap .couponList li p{color: #6E7175; font-size: 12px;}
+.myInfoWrap .couponWrap .couponList li::after{content: ''; width: 94px; height: 69px; position: absolute; top:33px; right:0; background: url(../images/sub/coupon_img.svg)no-repeat; background-size: cover;}
+
+
+/* 즐겨찾기 */
+.favoritesWrap .tab{position: relative; margin-bottom: 9px; gap: 0 25px;}
+.favoritesWrap .tab::after{content: ''; position: absolute; bottom: 0; left:-100%; right:-100%; border-bottom: 1px solid #EBEDF0;}
+.favoritesWrap .tab li{flex: none;}
+.favoritesWrap .favoritesList{padding-bottom: 52px; }
+.favoritesWrap .favoritesList li{position: relative; padding: 15px 32px 15px 0; display: flex; gap: 0 12px;}
+.favoritesWrap .favoritesList li::after{content: ''; position: absolute; left: -100%; right: -100%; bottom: 0; border-bottom: 1px solid #F7F9FA;} 
+.favoritesWrap .favoritesList li .imgBox{width: 40px; height: 40px; border-radius: 50px; overflow: hidden;} 
+.favoritesWrap .favoritesList li .imgBox.text{ line-height: 40px; border: 1px solid #E3E8F0; background-color: #EDF0F5;  text-align: center;}
+.favoritesWrap .favoritesList li .imgBox.text .mainName{font-weight: 600; font-size: 14px;}
+.favoritesWrap .favoritesList li .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.favoritesWrap .favoritesList li .textBox .name{font-size: 16px; font-weight: 600; line-height: 1;}
+.favoritesWrap .favoritesList li .textBox .address{color: #484E58; font-size: 14px;}
+.favoritesWrap .favoritesList li .textBox .number{color: #6E7175; font-size: 13px; line-height: 1;}
+.favoritesWrap .favoritesList li .favoritesBtn{width: 22px; height: 21px; position: absolute; top: 50%; right:0; transform: translateY(-50%); background: url(../images/sub/favorites_icon.svg)no-repeat; background-size: cover;}
+.favoritesWrap .favoritesList li .favoritesBtn.active{background: url(../images/sub/active_favorites_icon.svg)no-repeat; background-size: cover;} 
+.commonPopup02.FavoritesCommonPopup02 #section01 .profileWrap{padding: 33px 0;}
+.commonPopup02.FavoritesCommonPopup02 #section01 .profileBox{position: relative; width: 63px; height: 63px; margin: 0 auto;}
+.commonPopup02.FavoritesCommonPopup02 #section01 .profileBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.commonPopup02.FavoritesCommonPopup02 #section01 .profileBox .profileBtn{width: 28px; height: 28px; position: absolute; right:-10px; bottom: 0; background: url(../images/sub/profileBtn.svg)no-repeat center; background-size: cover;}
+.commonPopup02.FavoritesCommonPopup02 #section02 .formBox{margin-bottom: 16px; }
+.commonPopup02.FavoritesCommonPopup02 #section02 .formBox .formBorder{height: 1px; background-color: #F3F4F5;}
+.commonPopup02.FavoritesCommonPopup02 #section02 .formBox input{padding: 14px 17px 15px 16px;  font-size: 15px; border-color: #E6E8EC;}
+.commonPopup02.FavoritesCommonPopup02  #section02 span{display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; line-height: 25px;} 
+.commonPopup01.FavoritesCommonPopup01{height: 199px; z-index: 9999999; border-radius: 17px 17px 0 0;}
+.commonPopup01.FavoritesCommonPopup01 h1{margin-bottom: 19px; text-align: center; font-weight: 500; font-size: 19px; line-height: 23px;}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList{display: flex; gap: 0 29px; justify-content: center;}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList li a{display: block; width: 57px; text-align: center;}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList li a span{padding-top: 62px;position: relative; display: block; color: #59627C; font-size: 11px; line-height: 13px;}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList li a span::after{content: ''; width: 57px; height: 57px; position: absolute; top:0; left:50%; transform: translateX(-50%);}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList li a.imgSelect01 span::after{background: url(../images/sub/imgselect_icon01.svg)no-repeat; background-size: cover;}
+.commonPopup01.FavoritesCommonPopup01 .favoritesImgList li a.imgSelect02 span::after{background: url(../images/sub/imgselect_icon02.svg)no-repeat; background-size: cover;}
+.favoritesBg{z-index: 99999;}
+
+/* 즐겨찾기-주소추가 */
+.favoritesWrap .sarchBox input{border-radius: 13px;}
+
+/* 즐겨찾기-주소록 삭제 */
+.favoritesWrap .commonPopup02 .favoritesList li{position: relative;}
+.favoritesWrap .commonPopup02 .favoritesList li::after{content: ''; height: 1px; position: absolute; left:-100%; right:-100%; bottom: 0; border-bottom: 1px solid #F7F9FA;}
+.favoritesWrap .commonPopup02 .favoritesList li .imgBox{margin-top: 7px;}
+.favoritesWrap .commonPopup02 .favoritesList li .textBox .address{margin-bottom: 0;}
+.favoritesWrap .commonPopup02 .favoritesList li .textBox .name{line-height: 29px;}
+.favoritesWrap .commonPopup02 .favoritesList li .inputRadioBox{align-self: center;}
+.favoritesWrap .commonPopup02 .favoritesList li .inputRadioBox input:checked + label{border: 0; background-color: #066AEB;}
+.favoritesWrap .commonPopup02 .favoritesList li .inputRadioBox label{position: relative; display: block; width: 23px; height: 23px; border: 1px solid #E0E4EB; border-radius: 50px;}
+.favoritesWrap .commonPopup02 .favoritesList li .inputRadioBox label::after{content: ''; position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%); width: 11px; height: 8px; background: url(../images/sub/check_icon01.svg)no-repeat center; background-size: cover;} 
+
+/* 즐겨찾기-검색 */
+.favoritesWrap .searchResultBox .resultBox .result{padding: 0;}
+.favoritesWrap .searchResultBox .resultBox .box{position: relative; padding: 15px 32px 15px 0; display: flex;
+    gap: 0 12px;}
+.favoritesWrap .searchResultBox .resultBox .box .imgBox{width: 40px; height: 40px; border-radius: 50px; overflow: hidden; flex-shrink: 0;}
+.favoritesWrap .searchResultBox .resultBox .box .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.favoritesWrap .searchResultBox .resultBox .box .textBox .name{font-size: 16px; font-weight: 600; line-height: 1;}
+.favoritesWrap .searchResultBox .resultBox .box .textBox .address{color: #484E58; font-size: 14px;}
+.favoritesWrap .searchResultBox .resultBox .box .textBox .number{color: #6E7175; font-size: 13px; line-height: 1;}
+.favoritesWrap .searchResultBox .resultBox .box .imgBox.text{line-height: 40px; border: 1px solid #E3E8F0;
+    background-color: #EDF0F5; text-align: center;}
+.favoritesWrap .searchResultBox .resultBox .box .imgBox.text .mainName{font-weight: 600; font-size: 14px;}
+.favoritesWrap .searchResultBox .resultBox .box .color{font-weight: 600; color: #066AEB;}
+
+/* 이용현황 */
+#header h1 .number{padding-left: 3px; color: #066AEB; font-weight: 600; font-size: 18px; vertical-align: top;}
+.statusWrap .statusTopBox{margin-top: -5px; position: relative; padding: 13px 0 14px; z-index: 1;}
+.statusWrap .statusTopBox::before{content: ''; position: absolute; top:0; left: -100%; right:-100%; border-top: 1px solid #EBEDF0;}
+.statusWrap .statusTopBox::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; bottom: 0; background-color: #F4F6F9; z-index: -1;} 
+.statusWrap .statusTop{ padding: 12px 17px 18px 18px; height: 161px; border-radius: 17px; box-shadow: 0 16px 30px rgba(0, 49, 131, 0.2);}
+.statusWrap .statusTop.quick{background-color: #337EFB;}
+.statusWrap .statusTop.parcel{position: relative; background-color: #35A181;}
+.statusWrap .statusTop.parcel::after{content: ''; width: 43px; height: 26px; position: absolute; right:16px; bottom: 19px; background: url(../images/sub/parcel_icon.svg)no-repeat center; background-size: cover;}
+.statusWrap .statusTop .text{margin-bottom: 4px; display: flex; gap:0 7px; align-items: center;}
+.statusWrap .statusTop .text .statusText{font-size: 13px; color: #fff; line-height: 29px;}
+.statusWrap .statusTop .text .deliveryStatus{display: block; width: 37px; height: 17px; line-height: 17px; text-align: center; border-radius: 33px; font-weight: 600; font-size: 10px; color: #fff;}
+.statusWrap .statusTop.quick .text .deliveryStatus{background-color: #2469DC;}
+.statusWrap .statusTop.parcel .text .deliveryStatus{background-color: #198968;}
+.statusWrap .statusTop .title{color: #fff; font-size: 18px;}
+.statusWrap .statusTop .title strong{font-weight: 600;}
+.statusWrap .statusTop .title span{font-size: 18px;}
+.statusWrap .statusTop .title .icon{position: relative; padding-left: 21px;}
+.statusWrap .statusTop .title .icon::before{content: ''; position: absolute; top: 2px; left:0; width: 17px; height: 17px; background: url(../images/sub/quick_icon.svg)no-repeat center; background-size: cover;} 
+.statusWrap .statusList{padding-bottom: 49px;}
+.statusList li{position: relative; padding: 12px 17px 20px 0;}
+.statusList li::after{content: ''; position: absolute; left:-100%; right:-100%; bottom: 0; height: 1px; background-color: #F3F4F5;}
+.statusList li .box{display: flex; align-items: center; gap: 0 12px;}
+.statusList li .topText{margin-bottom: 11px; height: 29px; display: flex; align-items: center; gap: 0 19px;}
+.statusList li .topText .text{position: relative; color: #393939; font-weight: 600; font-size: 13px;}
+.statusList li .topText .text::after{content: ''; position: absolute; top:5px; right:-11px; width: 3px; height: 3px; border-radius: 50px;  background-color: #BEC3C8;} 
+.statusList li .topText .date{color: #9DA0A4; font-size: 13px;}
+.statusList li .imgBox{position: relative; width: 67px; height: 67px; border: 1px solid #EDEFF3; border-radius: 23px;}
+.statusList li .imgBox span{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.statusList li .imgBox .motorcycleIcon{width: 31px; height: 28px; background: url(../images/sub/motorcycle_icon.svg)no-repeat center; background-size: cover;}
+.statusList li .imgBox .truckIcon{width: 42px; height: 25px; background: url(../images/sub/truck_icon.svg)no-repeat center; background-size: cover;}
+.statusList li .imgBox .parcelIcon{width: 42px; height: 27px; background: url(../images/sub/parcel_icon.svg)no-repeat center; background-size: cover;}
+.statusList li .textBox .service{height: 29px; display: flex; align-items: center; gap: 0 32px;}
+.statusList li .textBox .service span{position: relative; font-weight: 600; font-size: 15px; }
+.statusList li .textBox .service em{font-weight: 600; font-size: 15px; }
+.statusList li .textBox .service span::after{content: ''; position: absolute; top:3px; right:-24px; width: 17px; height: 10px; background: url(../images/sub/service_arrow_icon.svg)no-repeat center; background-size: cover;}
+.statusList li .textBox .address{font-size: 13px; color: #6E7175;}
+.statusList li .textBox .price{font-size: 13px; color: #6E7175;}
+.statusList li .statusText{position: absolute; top:12px; right:0; line-height: 29px; font-size: 14px; font-weight: 600;}
+.statusList li .statusText01{color: #066AEB;}
+.statusList li .statusText02{color: #35A181;}
+.statusList li .statusText03{color: #6E7175;}
+.statusList li .statusText04{color: #9DA0A4;}
+
+/* 이용현황-필터 */
+.statusCommonPopup01{padding: 27px 17px 20px; height: 681px; overflow-x: hidden;}
+.statusCommonPopup01 h1{text-align: center; font-size: 20px; line-height: 29px; background-color: #fff;}
+.statusCommonPopup01 .statusBox{position: relative; padding: 16px 0 18px 0; }
+.statusCommonPopup01 .statusBox h2{margin-bottom: 11px; font-weight: 600; line-height: 29px; font-size: 16px;}
+.statusCommonPopup01 .statusBox::after{content: ''; position: absolute; bottom: 0; left: -100%; right:-100%; border-bottom: 1px solid #F3F4F5;}
+.statusCommonPopup01 .statusBox .filterList{display: flex; flex-wrap: wrap; gap: 8px 7px; }
+.statusCommonPopup01 .statusBox .filterList li a{padding: 7.5px 13px; display: block; border-radius: 33px; text-align: center; border: 1px solid #DCE0E8; color: #6E7175; line-height: 1; font-size: 13px;} 
+.statusCommonPopup01 .statusBox .filterList li a.active{background-color: #11141B; border: 0; color: #fff;}
+.statusCommonPopup01 .statusBox .checkSelectBox{position: relative; 
+}
+.statusCommonPopup01 .statusBox .checkSelectBox .select.active + .checkSelectView{display: block;}
+.statusCommonPopup01 .statusBox .checkSelectBox .select{display: block; padding-left: 15px; display: flex; align-items: center; height: 52px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.statusCommonPopup01 .statusBox .checkSelectBox .checkSelectView{display: none; padding: 10px 10px 10px 15px; position: absolute; top:58px; left:0; right:0; background-color: #f9f9f9; height: 86px; overflow-y: auto; z-index: 9; }
+.statusCommonPopup01 .statusBox .checkSelectBox .checkSelectView a{padding: 7px; display: block; font-size: 14px;}
+
+.statusCommonPopup01 .statusBox .checkSelectBox span{padding-top: 2px; padding-left: 27px; position: relative; font-size: 15px;}
+.statusCommonPopup01 .statusBox .checkSelectBox span::before{content: ''; position: absolute; top: 0; left:0; width: 20px; height: 20px; background: url(../images/sub/check_icon02.svg)no-repeat center; background-size: cover;}
+.statusCommonPopup01 .btnBox{padding: 16px 0 0; display: flex; align-items: center; gap: 0 4px; }
+.statusCommonPopup01 .btnBox button{height: 50px; line-height: 48px;}
+.statusCommonPopup01 .btnBox .resetBtn{width: 90px; border: 1px solid #DCE0E8; border-radius: 17px;}
+.statusCommonPopup01 .btnBox .resetBtn span{padding-left: 29px; position: relative; font-size: 12px;}
+.statusCommonPopup01 .btnBox .resetBtn span::before{content: ''; position: absolute; top:-4px; left:0; width: 21px; height: 21px; background: url(../images/sub/reset_icon.svg)no-repeat; background-size: cover;} 
+.statusCommonPopup01 .btnBox .filterBtn{flex: 1;  width: 233px; background-color: #066AEB; border-radius: 17px; color: #fff;}
+
+/* 이용현황-삭제 */
+.z-comPopup{z-index: 9999999;}
+.z-Bg{z-index: 99999;}
+.comPopupSt .combtn{border-radius: 50px; font-weight: 400;}
+.commonPopup02.statusCommonPopup02 .delBox::after{display: none;}
+.commonPopup02.statusCommonPopup02 .statusInfoText{margin-bottom: 0; position: relative; height: 40px; line-height: 38px; color: #066AEB; font-size: 12px; text-align: center; z-index: 1;}
+.commonPopup02.statusCommonPopup02 .statusInfoText::after{content: ''; position: absolute; top:0; bottom: 0; left:-100%; right: -100%;  background-color: #F4F6F9; z-index: -1;}
+.commonPopup02.statusCommonPopup02 .statusList li .topText{margin-bottom: 3px; padding-left: 36px;}
+.commonPopup02.statusCommonPopup02 .statusList li .inputRadioBox{align-self: center;}
+.commonPopup02.statusCommonPopup02 .statusList li .inputRadioBox input:checked + label{border: 0; background-color: #066AEB;}
+.commonPopup02.statusCommonPopup02 .statusList li .inputRadioBox label{position: relative; display: block; width: 23px; height: 23px; border: 1px solid #E0E4EB; border-radius: 50px;}
+.commonPopup02.statusCommonPopup02 .statusList li .inputRadioBox label::after{content: ''; position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%); width: 11px; height: 8px; background: url(../images/sub/check_icon01.svg)no-repeat center; background-size: cover;} 
+.commonPopup02.statusCommonPopup02 .statusList li .statusText{top: 12px;}
+.commonPopup02.statusCommonPopup02 .statusList li .inputRadioBox{margin-top: -24px;}
+
+/* 이용현황-배차중 */
+.statusWrap .dispatchWrap .dispatchBox .map{height: 695px; margin: 0 -18px -331px; background-color: #fff;}
+.statusWrap .dispatchWrap .dispatchBox .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox{margin: 0 -18px; position: relative; padding: 28px 18px 40px; background-color: #fff; border-radius: 27px 27px 0 0;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox::after{content: ''; width: 72px; height: 57px; position: absolute; top:59px; right:18px; background: url(../images/sub/map_icon01.svg)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox::after{content: ''; width: 72px; height: 57px; position: absolute; top:59px; right:18px; background: url(../images/sub/map_icon01.svg)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox .pickupWrap::before{display: none;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox::before{width: 31px; height: 27px; content: ''; position: absolute; top: 92px; right:61px; background: url(../images/sub/map_icon02.svg)no-repeat center; background-size: cover; z-index: 9;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .title{margin-bottom: 7px; font-weight: 600; font-size: 19px; line-height: 25px;} 
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox p.text{margin-bottom: 17px; color: #9CA0A8; font-size: 13px; line-height: 17px;} 
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox a{margin-bottom: 26px; width: 114px; height: 33px; line-height: 31px; display: block; border: 1px solid #DCE0E8; border-radius: 50px; font-size: 13px; text-align: center;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList{ position: relative;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li.active.step01::after{background-color: #D9D9D9!important;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li.active .text{color: #11141B;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li.active::before,
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li.active::after{background-color: #337EFB; border-color: #337EFB;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li{position: relative; padding-left: 20px; margin-bottom: 12px; display: flex; justify-content: space-between;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li::before{content: ''; position: absolute;
+    left: 0; top: 3px; width: 4px; height: 4px; border: 3px solid #D9D9D9; border-radius: 50px; z-index: 9;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li::after{content: ''; position: absolute;
+    left: 4px; width: 2px; height: 21px; top: -16px; background-color: #D9D9D9;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li:first-child::after{display: none;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li:last-child{margin-bottom: 0;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li .text{font-size: 13px; line-height: 17px; color: #9CA0A8;}
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox .serviceList li .time{color: #9CA0A8; font-size: 13px; line-height: 17px;}
+.statusWrap .dispatchWrap .dispatchBox02.first{padding-top: 30px!important;}
+.statusWrap .dispatchWrap .dispatchBox02{ position: relative; padding: 15px 0 12.5px 0; background-color: #fff; z-index: 999;}
+.statusWrap .dispatchWrap .dispatchBox02 .copy{width: 17px; height: 19px; position: absolute; top:50%; right:17px; transform: translateY(-50%); background: url(../images/sub/copy_icon.svg)no-repeat center; background-size: cover; }
+.statusWrap .dispatchWrap .dispatchBox02::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; bottom: 0; z-index: -1; background-color: #fff;}
+.statusWrap .dispatchWrap .dispatchBox02 h2{margin-bottom: 8px; font-weight: 600; font-size: 16px; }
+.statusWrap .dispatchWrap .dispatchBox02 .destination li{position: relative;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.origin::before{width: 13px; height: 16px; content: ''; position: absolute; top: 20px; left:-25px; background: url(../images/sub/origin_icon.svg)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li::after{content: ''; width: 9px; height: 76px;  position: absolute; bottom: 20px; left: -23px; background: url(../images/sub/origin_arrow_icon.svg)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.number01::before{content: '1'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.number02::before{content: '2'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.number03::before{content: '3'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.number04::before{content: '4'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.number05::before{content: '5'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination{padding: 0 0 0 43px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li{margin-bottom: 3px; padding:17px 10px 17px 2px; border-bottom: 1px solid #E6E8EC; }
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .title{margin-bottom: 5px; display: block; font-weight: 600; font-size: 14px;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .name{margin-bottom: 5px; color: #707881; font-size: 14px; line-height: 1;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .address{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .number{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .caution{margin-top: 5px;  position: relative; padding-left: 21px; color: #066AEB; font-size: 14px}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li .caution::before{content: ''; position: absolute; top:1px; left:0; width: 15px; height: 15px; background: url(../images/sub/caution_icon.svg)no-repeat center; background-size: cover;} 
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.destination{border: 0;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.destination::after{display: none;}
+.statusWrap .dispatchWrap .dispatchBox02 .destination li.destination::before{content: '';position: absolute;
+    top: 20px; left: -25px;  width: 13px; height: 16px; background: url(../images/sub/destination_icon.svg)no-repeat center; background-size: cover;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox{position: relative; display: flex; align-items: center; height: 54px; border: 1px solid #ECEEF4; border-radius: 17px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox::after{content: ''; width: 23px; height: 23px; position: absolute; top: 16px; left: 50%; background: url(../images/sub/options_icon.svg.) no-repeat center;
+    background-size: cover; margin-left: -19px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox::before{content: ''; position: absolute; top: 9px;  left: 50%;width: 1px; height: 36px; background-color: #EEF0F4; margin-left: -8px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box{flex:1;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box01{padding-left: 15px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box span{position: relative; padding-left: 9px; color: #484E58; font-weight: 500; font-size: 14px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box span.damas{position: relative; padding-left: 47px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box span.damas::before{content: ''; width: 40px; height: 24px; position: absolute; top:-3px; left:0; background: url(../images/sub/damas_icon.svg)no-repeat center; background-size: cover;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box02{padding-left: 28px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box span.ktx{padding-left: 48px;}
+ .statusWrap .dispatchWrap .dispatchBox02 .optionsBox .box span.ktx::before{content: ''; width: 38px; height: 27px; position: absolute; top:-2px; left:0; background: url(../images/sub/ktx_icon.svg)no-repeat center; background-size: cover;}
+.comBox02 .box span{margin-bottom: 0!important; margin: 0!important; font-weight: 400!important;}
+.comBox{border: 1px solid #E6E8EC; border-radius: 13px;}
+.comBox .box{position: relative; padding: 19px 10px 18px 13px; display: flex;  flex-direction: column; justify-content: flex-start; border-bottom: 1px solid #F3F4F5;}
+.comBox .box:last-child{border-bottom: 0}
+.comBox .box::after{content: ''; position: absolute; left:0; right:0; bottom: 0;} 
+.comBox .box span{flex-shrink: 0; margin-right: 18px; display: block; margin-bottom: 5px; font-size: 14px; line-height: 17px; text-align: left; font-weight: 600;}
+.comBox .box p{color: #707881; font-size: 13px; line-height: 16px; text-align: left;}
+.comBox.cardComBox{margin-bottom: 9px;}
+.comBox.cardComBox span{font-weight: 400;}
+.comBox.cardComBox .box{padding: 19px 15px 18px 13px; display: flex; flex-direction: row; justify-content: space-between;}
+.comBox.cardComBox .cardIcon{position: relative; margin: 0; padding-left: 38px;}
+.comBox.cardComBox .cardIcon::before{content: ''; position: absolute; top:-3px; left:0; width: 30px; height: 23px; background: url(../images/sub/card_icon.svg)no-repeat center; background-size: cover;} 
+.comBox.cardComBox .priceBox{padding: 3px 0 3px 0; border: 0;}
+.comBox.cardComBox .priceBox .discount{color: #F75842;}
+.comBox.cardComBox .priceBox .priceList{width: 100%;}
+.comBox.cardComBox .priceBox .priceList li{display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; color: #707881; font-size: 13px;}
+.comBox.cardComBox .priceBox.paymentbox{align-items: center; margin-top: 13px; padding: 13px 0; border-top: 1px solid #F3F4F5; line-height: 29px;}
+.comBox.cardComBox .priceBox.paymentbox  p,
+.comBox.cardComBox .priceBox.paymentbox span{font-size: 16px; font-weight: 700; color: #11141B;}
+.comBox.cardComBox .priceBox .priceList li:last-child{margin-bottom: 0;}
+.comBox.cardComBox02{padding: 16px 15px 0 13px;}
+.comBox.cardComBox02 .priceBox02{justify-content: flex-start;}
+.comBtn02{position: relative; margin-top: -12px; display: block; width: 100%; line-height: 50px; height: 50px; text-align: center; border-radius: 17px; border: 1px solid #DCE0E8; font-size: 15px; z-index: 999;}
+
+/* 이용현황-서비스 취소 */
+.statusWrap .dispatchWrap .dispatchBox .text01{margin-bottom: -5px;}
+.statusWrap .dispatchWrap .dispatchBox .text01 strong{color: #FF3C3C;}
+
+/* 이용현황-픽업중 */
+.statusWrap .dispatchWrap .dispatchBox .mapInfoBox.pickupWrap::after{display: none;}
+
+/* 이용현황-픽업중 */
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus{margin-bottom: 23px; padding: 14px 0 30px 60px; gap: 0 15px; display: flex; border-bottom: 1px solid #F3F4F5;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .quickBox{text-align: center;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .quickBox .imgBox{margin-bottom: 13px; width: 77px; height: 77px; border-radius: 50px; background-color: #F7F7F8;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .quickBox .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .call{position: relative; display: block; width: 50px; height: 50px; border: 1px solid #DFE2EB; border-radius: 50px;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .call::after{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 19px; height: 20px; background: url(../images/sub/call_icon.png)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .quickText{margin-left: -7px; padding-left: 33px; position: relative; display: block; color: #707881; font-size: 14px;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .quickText::before{content: ''; position: absolute; top:-1px; left:0; width: 25px; height: 23px; background: url(../images/sub/motorcycle_icon.svg)no-repeat center; background-size: cover;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .timeText{width: 95px; height: 40px; line-height: 40px; position: absolute; top:28px; right:17px; font-weight: 600; border-radius: 10px; text-align: center;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .timeText01{background-color: #F9EAD9;}
+.statusWrap .dispatchWrap .dispatchBox .deliveryStatus .timeText02{background-color: #E0EDFF;}
+.statusWrap .dispatchWrap .dispatchBox .completeText strong{color: #066AEB;}
+
+/* 퀵-서비스 유형 선택 */
+.quickWrap .quickServiceSelWrap .quickSelectLink li{margin-bottom: 6px;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a{position: relative; padding: 20px 0 19px 21px; display: block; height: 77px; border: 1px solid #ECEEF4; border-radius: 17px; }
+.quickWrap .quickServiceSelWrap .quickSelectLink li a::after{content: ''; position: absolute; top:50%; right:18px; transform: translateY(-50%); width: 5px; height: 9px; background: url(../images/sub/quick_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a .box{position: relative;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a .box p{margin-bottom: 1px; color: #707881; font-weight: 500; font-size: 13px; line-height: 16px;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a .box span{display: block; font-weight: 600; line-height: 25px;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a.link01 .box{padding-left: 50px;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a.link01 .box::before{content: ''; position: absolute; top:0; left:0; width: 35px; height: 35px; background: url(../images/sub/quick_link_icon01.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a.link02 .box{padding-left: 42px;}
+.quickWrap .quickServiceSelWrap .quickSelectLink li a.link02 .box::before{content: ''; position: absolute; top:0; left:0; width: 21px; height: 34px; background: url(../images/sub/quick_link_icon02.svg)no-repeat center; background-size: cover;}
+
+/* 퀵-서비스 유형 선택-예약시간설정 */
+.quickWrap .quickReservationWrap .reservationTimeBox{margin-top: 11px; height: 25px; display: flex; align-content: center; justify-content: space-between; }
+.quickWrap .quickReservationWrap .reservationTimeBox span{font-size: 14px;}
+.quickWrap .quickReservationWrap .reservationTimeBox em{color: #066AEB; font-size: 14px;}
+
+/* 퀵-서비스 유형 선택-출발/도착지 설정 */
+.quickWrap .quickMapWrap{margin: 0 -18px;}
+.quickWrap .quickMapWrap .quickMap{height: 100vh;}
+.quickWrap .quickMapWrap .quickMap img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.quickCommonPopup{overflow: visible;}
+.quickCommonPopup .formBox{overflow: visible;}
+.quickCommonPopup{padding: 32px 17px 46px;}
+.quickCommonPopup .inputTextBox{position: relative;}
+.quickCommonPopup .inputTextBox::after{display: none;}
+.quickCommonPopup .inputTextBox::before{content: ''; position: absolute; top:29px; left:19px; width: 4px; height: 4px; background: url(../images/sub/border_icon.svg)no-repeat center; background-size: cover;} 
+.quickCommonPopup .inputTextBox.voiceBox::before{display: none;}
+.quickCommonPopup .inputTextBox input{height: 60px; padding: 20px 17px 20px 40px!important;}
+.quickCommonPopup .inputTextBox:first-child::before{display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quickCommonPopup .voice{position: absolute; left: 13px; top: 50%; transform: translateY(-50%); display: block; width: 18px; height: 22px; background: url(../images/sub/voice_icon02.svg)no-repeat center; background-size: cover;}
+.quickCommonPopup .voice p{padding: 17px 0; position: absolute; top:28px; left:-7px; width: 181px; height: 41px; font-size: 12px; color: #fff; border-radius: 10px;  background: url(../images/sub/voice_bg.svg)no-repeat center; background-size: cover; text-align: center; z-index: 999;} 
+.quickCommonPopup input:disabled{background-color: #fff;}
+.quickCommonPopup .formBorder{height: 1px; background-color: #E6E8EC; }
+.quickCommonPopup .quickTimeInfo{display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; transform: translateX(-50%); top:-45px;  width: 218px; height: 43px; background-color: #EFF5FF; border-radius: 17px;}
+.quickCommonPopup .quickTimeInfo span{display: block; font-size: 13px;}
+.quickCommonPopup .quickTimeInfo .time{padding-left: 24px; position: relative; flex-shrink: 0; margin-right: 7px;}
+.quickCommonPopup .quickTimeInfo .date{color: #066AEB;} 
+.quickCommonPopup .quickTimeInfo .time::before{content: ''; position: absolute; transform: translateY(-50%); top:50%; left:0; width: 17px; height: 17px; background: url(../images/sub/time_icon.svg)no-repeat; background-size: cover;}
+.quickHeader .container{padding: 0 14px;}
+.quickHeader .topTitleBox{height: auto!important; justify-content: space-between!important;}
+.quickHeader{padding: 0!important; position: absolute!important; top: 37px!important; background: 0!important;}
+.quickHeader .prevPage{position: static!important; transform: none!important; width: 37px!important; height: 37px!important; background: url(../images/sub/quick_arrow_icon02.svg)no-repeat center!important; background-size: cover!important;}
+.quickHeader .request{display: block; padding: 11px 12px 10px 7px; background-color: #fff; border-radius: 33px; box-shadow: 0 4px 8px rgba(0,0,0,0.25);}
+.quickHeader .request span{position: relative; padding-left: 30px; display: block; font-weight: 600; font-size: 13px;}
+.quickHeader .request span::before{content: ''; position: absolute; top:-5px; left:0; width: 25px; height: 25px; background: url(../images/sub/address_request_icon.svg)no-repeat center; background-size: cover;}
+.quickHeader .postionBox{width: 287px; background-color: #fff; border-radius: 33px; box-shadow: 0 4px 8px rgba(0,0,0,25%); overflow: hidden;}
+.quickHeader .postionBox .positionList{position: relative; padding-left: 13px; height: 37px; line-height: 39px; display: flex; gap: 0 23px;}
+.quickHeader .postionBox .positionList::after{content: ''; width: 35px; position: absolute; top:0; right:0; bottom: 0; background: url(../images/sub/box_shadow.png)no-repeat center;}
+
+.quickHeader .postionBox .positionList li{position: relative; font-size: 13px; font-weight: 600;}
+.quickHeader .postionBox .positionList li::after{content: ''; width: 4px; height: 7px; position: absolute; top: 16px; right:-14px; background: url(../images/sub/position_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickHeader .postionBox .positionList li:last-child:after{display: none;}
+.quickHeader .inquiry{width: 37px; height: 37px; display: block; background: url(../images/sub/inquiry_icon02.svg)no-repeat center; background-size: cover;}
+
+/* 퀵-출발지 설정 */
+.quickWrap .quickSearchBox .sarchBox{margin: 0;}
+.quickWrap .quickSearchBox .sarchBox input{padding: 14px 10px 13px 40px; border-radius: 13px; font-size: 16px;}
+.quickWrap .quickSearchBox .sarchBox input::placeholder{color: #ACB0BB;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox{position: relative;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox::before{content: ''; position: absolute; top:20px; left:18px; width: 6px; height: 6px; }
+.quickWrap .quickSearchBox .sarchBox .inputTextBox.origin::before{ background: url(../images/sub/border_icon.svg) no-repeat center; background-size: cover;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox.destination input{background-color: #fff;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox.destination::before{border-radius: 50px; background-color: #FF6508;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox.destination a{padding-left: 14px; display: block; position: absolute; top: 50%; right:18px; transform: translateY(-50%); color: #A3A6AC; font-size: 14px;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox.destination a::before{content: ''; position: absolute; top:50%; left:0; transform: translateY(-50%); width: 9px; height: 9px; background: url(../images/sub/destination_icon02.svg) no-repeat center; background-size: cover;}
+.quickWrap .quickSearchBox .sarchBox .inputTextBox .voice{position: absolute; top:0; right:18px;  width: 13px; height: 17px; position: absolute; top:50%; right:18px; transform: translateY(-50%); background: url(../images/sub/recording_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickSearchLink{padding: 16px 0 17px 15px; display: flex; align-items: center; justify-content: space-between; line-height: 1;}
+.quickWrap .quickSearchLink .box{display: flex; align-items: center; } 
+.quickWrap .quickSearchLink .box.box01{gap: 0 27px;}
+.quickWrap .quickSearchLink .box.box02{gap: 0 34px;}
+.quickWrap .quickSearchLink .box a{display: block; }
+.quickWrap .quickSearchLink .box a em{position: relative; color: #232A37; font-size: 13px;}
+.quickWrap .quickSearchLink .box a em::before{content: ''; position: absolute; top:0; left:0;}
+.quickWrap .quickSearchLink .box a.home em{padding-left: 25px;}
+.quickWrap .quickSearchLink .box a.home em::before{top: -1px; width: 19px; height: 17px; background: url(../images/sub/home_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickSearchLink .box a.company em{padding-left: 22px;}
+.quickWrap .quickSearchLink .box a.company em::before{top: -1px; width: 15px; height: 17px; background: url(../images/sub/company_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickSearchLink .box a.position{position: relative; width: 19px; height: 19px; background: url(../images/sub/position_icon.svg)no-repeat center; background-size: cover; }
+.quickWrap .quickSearchLink .box a.position::after{ content: ''; position: absolute; top:1px; right:-16px; width: 1px; height: 17px; background-color: #F5F7F9;}
+.quickWrap .quickSearchLink .box a.map{width: 18px; height: 19px; background: url(../images/sub/map_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickSearchBox .inputTextBox.origin input{padding-right: 40px;}
+.quickWrap .quickSearchBox .inputTextBox.destination input{padding-right: 65px;}
+.quickWrap .quickSearchBox .inputTextBox.origin input:focus{background-color: #F5F6F7!important;}
+.quickWrap .searchResultBox .noSearchText{padding: 170px 10px 0; color: #ACB0BB; font-size: 14px; text-align: center; line-height: 29px;}
+
+/* 퀵-상세정보 */
+#topTitleBox.topTitleBoxSt .favoritesBtn02.active{background: url(../images/sub/active_favoritesBtn.svg)no-repeat center; background-size: cover;}
+#topTitleBox.topTitleBoxSt .favoritesBtn02{position: absolute; top: 50%; transform: translateY(-50%); right:0; width: 22px; height: 22px; background: url(../images/sub/favoritesBtn.svg)no-repeat center; background-size: cover;}
+.quickWrap .detailInfoWrap{position: relative; }
+.quickWrap .detailInfoWrap::after{content: ''; position: absolute; top:0; left: -100%; right: -100%; border-top: 1px solid #EDEFF2;}
+.quickWrap .detailInfoWrap .detailBox h2{margin-bottom: 8px; font-weight: 600; font-size: 16px; line-height: 25px;}
+.quickWrap .detailInfoWrap .detailBox .formBox{margin-bottom: 16px;}
+.quickWrap .detailInfoWrap .detailBox .formBox input{height: 51px; padding: 15px 75px 16px 15px; font-size: 15px;}
+.quickWrap .detailInfoWrap .detailBox .formBox .formBorder{height: 1px; background-color: #F3F4F5;}
+.quickWrap .detailInfoWrap .detailBox .formBox .inputTextBox{position: relative;}
+.quickWrap .detailInfoWrap .detailBox .formBox .inputTextBox::after{display: none;}
+.quickWrap .detailInfoWrap .detailBox .formBox .inputTextBox input:disabled{background-color: #fff;}
+.quickWrap .detailInfoWrap .detailBox .formBox .formBtn{position: absolute; top: 50%; transform: translateY(-50%); right:11px; border-radius: 7px; border: 1px solid #E7EAF0; width: 47px; height: 31px; text-align: center; background-color: #fff; color: #707881; font-size: 12px; z-index: 9;} 
+.quickWrap .detailInfoWrap .detailBox .select{display: block; padding: 17px 75px 14px 15px; font-size: 15px; border: 1px solid #E7EAF0; border-radius: 13px;}
+.quickWrap .detailInfoWrap .detailBox  .formBox{overflow: visible;}
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox{position: relative;}
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox .detailAddressSel{position: relative; display: block; padding: 17px 75px 14px 15px; font-size: 15px; border-radius: 13px;}
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox .detailAddressSel::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); right:49px; width: 9px; height: 5px; background: url(../images/sub/sel_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox .infoBtn{position: absolute; top: 50%; transform: translateY(-50%); right:16px; width: 21px; height: 21px; border-radius: 50px; border: 1px solid #DCE0E8; z-index: 99; background-color: #fff;}
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox .infoBtn::after{content: ''; position: absolute; top: 50%; left: 49%; transform: translate(-50%, -50%); width: 6px; height: 10px; background: url(../images/sub/question_mark_icon.svg)no-repeat center; background-size: cover;} 
+.quickWrap .detailInfoWrap .detailBox  .formBox .detailAddressBox .detailInfoText{display: none; 
+padding: 10px 12px 12px 12px;  position: absolute; top:41px; right:0; background: #11141B; border-radius: 13px; color: #fff; font-size: 12px; line-height: 17px; z-index: 99;}
+.quickWrap .detailInfoWrap .detailBox .addressText::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); right:0; width: 5px; height: 9px; background: url(../images/sub/address_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .detailInfoWrap .detailBox .addressText::before{width: 6px; height: 6px; content: ''; position: absolute; top: 42%; left:0; background: url(../images/sub/border_icon02.svg)no-repeat center; background-size: cover;}
+.quickWrap .detailInfoWrap .detailBox .addressText{position: relative; padding: 13px 0 15px 18px; display: block;}
+.quickWrap .detailInfoWrap .detailBox .addressText span{margin-bottom: 2px; display: block; font-weight: 500;}
+.quickWrap .detailInfoWrap .detailBox .addressText em{display: block; font-size: 14px;}
+
+/* 퀵-상세정보(특이사항) */
+.detailInfoPopup span{margin-bottom: 26px; display: block; color: #707881; font-size: 12px;}
+.detailInfoPopup .title{margin-bottom: 11px; line-height: 24px;}
+.detailInfoPopup .significantList li{margin-bottom: 12px;}
+.detailInfoPopup .significantList li .inputCheckBox label{position: relative; padding-left: 32px; font-weight: 500; font-size: 15px;}
+.detailInfoPopup .significantList li .inputCheckBox label::before{content: ''; position: absolute; top:3px; left:0; width: 16px; height: 11px; background: url(../images/sub/check_icon.svg)no-repeat center; background-size: cover;} 
+.detailInfoPopup .significantList li .inputCheckBox input:checked + label::before{background: url(../images/sub/active_chk_icon.svg)no-repeat center; background-size: cover;}
+.detailInfoPopup .inputTextBox input{padding: 15px 17px 15px 16px;}
+.detailInfoPopup .combtn{margin-top: 34px;}
+
+/* 퀵-상세정보(특이사항) */
+.detailInfoPopup02{padding-top: 74px; height: 259px;}
+.detailInfoPopup02 .title{position: relative; margin-bottom: 6px; text-align: center;}
+.detailInfoPopup02 .title::before{content: ''; position: absolute; top:-48px; left: 50%; transform: translateX(-50%); width: 45px; height: 45px; background: url(../images/sub/reset_icon02.svg)no-repeat center; background-size: contain;}
+.detailInfoPopup02 span{margin-bottom: 47px; display: block; color: #6E7175; text-align: center; line-height: 19px; font-size: 14px;}
+
+/* 퀵-출발/도착지 설정 */
+.quickWrap .icon{width: 37px; height: 50px; position: absolute; top:0;}
+.quickWrap .icon.departIcon{background: url(../images/sub/depart_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .icon.arriveIcon{left: 40px; background: url(../images/sub/arrive_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .mapSettingWrap{position: relative; margin: 0 -18px;}
+.quickWrap .mapSettingWrap .map{/*height: 693px;*/ height: 100vh;}
+.quickWrap .mapSettingWrap .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.quickWrap .mapCommonPopup01{padding: 29px 17px 20px;  border-radius: 17px 17px 0 0;}
+.quickWrap .mapCommonPopup01 .title02{margin-bottom: 3px;}
+.quickWrap .mapCommonPopup01 .title02 + span{display: block; margin-bottom: 31px; color: #484E58; font-size: 14px;}
+.quickWrap .mapCommonPopup01 .title{margin-bottom: 13px;}
+
+/* 퀵-주소요청 */
+.quickWrap .requestCommonPopup01{height: 275px; padding: 17px 17px 20px; border-radius: 17px;}
+.quickWrap .requestCommonPopup01 .requestList li a{padding: 13px 0; display: block; line-height: 29px;}
+.quickWrap .requestCommonPopup01 .requestList{margin-bottom: 40px;}
+.quickWrap .requestCommonPopup02{padding: 23px 18px 20px; border-radius: 17px;}
+.quickWrap .requestCommonPopup02 .title{text-align: center;}
+.quickWrap .requestCommonPopup02 .requestBox{position: relative; margin-bottom: 20px;}
+.quickWrap .requestCommonPopup02 .requestBox .contact{position: absolute; top:6px; right:0; color: #5C5F63; font-size: 13px; text-decoration: underline;}
+.quickWrap .requestCommonPopup02 .requestBox h2{margin-bottom: 11px; font-weight: 600; line-height: 29px; font-size: 16px;}
+.quickWrap .requestCommonPopup02 .requestBox h2 + p{margin-bottom: 20px; color: #5C5F63; font-size: 12px;}
+.quickWrap .requestCommonPopup02 .requestBox input{width: 100%; padding-left: 17px; height: 46px; background-color: #F5F6F7; color: #11141B; border-radius: 13px; border: 0;}
+.quickWrap .requestCommonPopup02 .requestBox input::placeholder{color: #ACB0BB;}
+.quickWrap .requestCommonPopup02 .comBtn02{margin-top: 0; width: 40%;}
+.quickWrap .requestCommonPopup02 .combtn{width: 60%; height: 50px; line-height: 50px; font-size: 15px;}
+
+/* 퀵-옵션선택 */
+.optionCommonPopup01{ padding:13px 17px 20px; border-radius: 17px 17px 0 0; overflow: visible;}
+.optionCommonPopup01 .optionList li a{ display: flex; align-items: center;}
+.optionCommonPopup01 .optionList li a .imgBox{flex-shrink: 0; width: 59px;}
+.optionCommonPopup01 .optionList02 li a .imgBox{width: 53px;}
+.optionCommonPopup01 .optionList li a .imgBox img{display: block;}
+.optionCommonPopup01 .optionList li a .imgBox .img01{width: 31px; margin-left: 7px;}
+.optionCommonPopup01 .optionList li a .imgBox .img02{width: 45px;}
+.optionCommonPopup01 .optionList li a .imgBox .img03{width: 48px;}
+.optionCommonPopup01 .optionList li a .imgBox .img04{width: 48px;}
+.optionCommonPopup01 .optionList li a .imgBox .img05{width: 17px; margin-left: 7px;}
+.optionCommonPopup01 .optionList li a .imgBox .img06{width: 30px;}
+.optionCommonPopup01 .optionList li a .imgBox .img07{width: 39px;}
+.optionCommonPopup01 .optionList li a .imgBox .img08{width: 39px;}
+.optionCommonPopup01 .optionList li a .imgBox .img09{width: 39px;}
+.optionCommonPopup01 .optionList li a .textBox{width: 100%; padding: 18px 0; border-bottom: 1px solid #F3F4F5;}
+.optionCommonPopup01 .optionList li a .textBox h2{margin-bottom: 2px; font-weight: 600; font-size: 15px;}
+.optionCommonPopup01 .optionList li a .textBox p{color: #707881; font-size: 13px;}
+.optionCommonPopup01 .intoTextBox{position: relative; padding: 2px 13px; position: absolute; top:-29px; left:21px; line-height: 29px; color: #fff; font-size: 12px; background: #066AEB; border-radius: 7px;}
+.optionCommonPopup01 .intoTextBox::before{content: ''; position: absolute; left:8px; bottom: -9px; width: 0; height: 0; border-style: solid; border-width: 13px 8.5px 0px 8.5px; border-color: #066aeb transparent transparent transparent;}
+.optionCommonPopup01 .price{padding-top: 19px; align-self: flex-start; flex-shrink: 0; font-size: 15px; line-height: 18px;}
+.optionCommonPopup01 .intoTextBox.quick{padding-left: 10px;}
+.optionCommonPopup01 .intoTextBox.quick span{position: relative; padding-left: 29px;}
+.optionCommonPopup01 .intoTextBox.quick span::after{content: ''; position: absolute; top:0; left:0; width: 20px; height: 18px; background: url(../images/sub/quick_icon01.svg)no-repeat center; background-size: cover;}
+
+/* 퀵-물품정보 */
+.quickWrap .articleInfoWrap .text01 .color{color: #066AEB;}
+.quickWrap .articleInfoWrap .articleBox{position: relative; padding: 25px 0 33px;}
+.quickWrap .articleInfoWrap .articleBox h2{margin-bottom: 12px; font-size: 16px;}
+.quickWrap .articleInfoWrap .articleBox .articleInfoText li{position: relative; padding-left: 10px; margin-bottom: 5px; color: #707881; font-size: 12px; line-height: 14px;}
+.quickWrap .articleInfoWrap .articleBox .articleInfoText li:last-child{margin-bottom: 0;}
+.quickWrap .articleInfoWrap .articleBox .articleInfoText li::before{content: ''; position: absolute; top: 5px; left:0; width: 3px; height: 3px; border-radius: 50px; background-color: #ABB2BA;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList{ margin-bottom: 12px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li:last-child a::after{display: none;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a{position: relative; display: block; padding: 23px 12px 23px 90px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a.active{margin: -1px; border: 2px solid #337EFB!important; border-radius: 13px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a::after{content: ''; position: absolute; left:50%; transform: translateX(-50%); right:0; bottom: 0; width: 92%; height: 1px; background-color: #F3F4F5;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li h3{margin-bottom: 5px; font-weight: 600; font-size: 15px; line-height: 18px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li p{display: flex; gap: 0 15px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li p span{position: relative;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li p span::after{content: ''; position: absolute; top:7px; right:-9px; width: 2px; height: 2px; border-radius: 50px; background-color: #BEC3C8;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li p span,
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li p em{color: #707881; font-size: 12.5px;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a::before{content: ''; position: absolute; top:50%; left:21px; transform: translateY(-50%);}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a.article01::before{width: 49px; height: 32px; content: ''; position: absolute; background: url(../images/sub/parcel_icon01.svg)no-repeat center; background-size: cover;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a.article02::before{width: 56px; height: 35px;  content: ''; position: absolute; background: url(../images/sub/parcel_icon02.svg)no-repeat center; background-size: cover;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a.article03::before{width: 51px; height: 27px; content: ''; position: absolute; background: url(../images/sub/parcel_icon03.svg)no-repeat center; background-size: cover;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li a.article04::before{width: 55px; height: 39px; content: ''; position: absolute; background: url(../images/sub/parcel_icon04.svg)no-repeat center; background-size: cover;}
+.quickWrap .articleInfoWrap .articleBox .articleSizeList li:last-child a{border-bottom: 0;}
+.quickWrap .articleInfoWrap .articleBox .note{width: 97px; height: 30px; line-height: 28px; position: absolute; top:20px; right:0; display: block; color: #707881; font-size: 12px; text-align: center; border-radius: 50px; border: 1px solid #DCE0E8;}
+.quickWrap .articleInfoWrap .text01{margin: 0 0 5px; font-size: 19px;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox{display: flex; gap: 0 6px;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox a{width: 50%; height: 60px; line-height: 60px; display: block; border: 1px solid #E6E8EC; border-radius: 13px; text-align: center; font-size: 15px; font-weight: 500;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02{position: relative; margin-bottom: 9px;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02:last-child{margin-bottom: 0;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .select{position: relative; padding-left: 16px; display: block; border: 1px solid #E6E8EC; border-radius: 13px; line-height: 60px; line-height: 60px; font-size: 15px;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .select::after{content: ''; width: 9px; height: 5px; position: absolute; top:50%; right:16px; transform: translateY(-50%); background: url(../images/sub/sel_arrow_icon.svg)no-repeat center; background-size: cover; } 
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .select.active::after{transform: translateY(-50%) rotate(180deg);}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .select.active + .articelSelectList{display: block;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .articelSelectList{display: none; padding: 10px 10px 10px 15px;position: absolute; top: 68px; left: 0; right: 0; background-color: #f9f9f9; height: 86px;
+    overflow-y: auto; z-index: 9;}
+.quickWrap .articleInfoWrap .articleBox .articelSelectBox02 .articelSelectList li a{display: block; padding: 7px; font-size: 14px;}
+.quickWrap .btnBox{margin: 0;}
+.commonPopup01.articleCommonPopup{ padding: 32px 17px 20px; height: 199px; border-radius: 13px 13px 0 0;}
+ .commonPopup01.articleCommonPopup h1{margin-bottom: 19px; text-align: center; font-weight: 500; font-size: 19px; line-height: 23px;}
+.commonPopup01.articleCommonPopup .ImgList{display: flex; gap: 0 29px; justify-content: center;}
+.commonPopup01.articleCommonPopup .ImgList li a{display: block; width: 57px; text-align: center;}
+.commonPopup01.articleCommonPopup .ImgList li a span{padding-top: 62px;position: relative; display: block; color: #59627C; font-size: 11px; line-height: 13px;}
+.commonPopup01.articleCommonPopup .ImgList li a span::after{content: ''; width: 57px; height: 57px; position: absolute; top:0; left:50%; transform: translateX(-50%);}
+.commonPopup01.articleCommonPopup .ImgList li a.imgSelect01 span::after{background: url(../images/sub/imgselect_icon01.svg)no-repeat; background-size: cover;}
+.commonPopup01.articleCommonPopup .ImgList li a.imgSelect02 span::after{background: url(../images/sub/imgselect_icon02.svg)no-repeat; background-size: cover;}
+.favoritesBg{z-index: 99999;}
+
+/* 퀵-물품정보(사진첨부) */
+.quickWrap .articleBox .articelSelectBox a.active{border: 2px solid #337EFB!important; color: #337EFB;}
+.quickWrap .articleBox .articelImgBox{padding-top: 8px; margin: 10px -18px 0 0; overflow-x: auto;}
+.quickWrap .articleBox .articelImgBox{-ms-overflow-style: none;}
+.quickWrap .articleBox .articelImgBox::-webkit-scrollbar{display:none;}
+.quickWrap .articleBox .articelImgBox .articelImgList{display: flex; gap: 0 15px;}
+.quickWrap .articleBox .articelImgBox .articelImgList li{position: relative;}
+.quickWrap .articleBox .articelImgBox .articelImgList li .imgDelBtn{position: absolute; top:-8px; right:-12px; width: 23px; height: 23px; background: url(../images/sub/del_btn_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .articleBox .articelImgBox .articelImgList li .imgBox{width: 115px; height: 92px;  border-radius: 13px; overflow: hidden;}
+.quickWrap .articleBox .articelImgBox .articelImgList li .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;} 
+.quickWrap .articleBox .articelTextBox{margin-top: 19px;}
+.quickWrap .articleBox .articelTextBox h3{font-weight: 600; font-size: 16px;}
+.quickWrap .articleBox .articelTextBox p{margin-top: 8px; padding: 12px 23px 33px 16px; color: #ACB0BB; font-size: 14px; background-color: #F5F6F7; line-height: 19px; border-radius: 13px;}
+
+/* 퀵-물품보관장소 */
+.custodyCommonPopup{padding: 34px 17px 20px;}
+.custodyCommonPopup .custodyList li{margin-bottom: 5px;}
+.custodyCommonPopup .custodyList li:last-child{margin-bottom: 0;}
+.custodyCommonPopup .custodyList li .inputRadioBox label{padding-left: 32px; position: relative; font-weight: 500; font-size: 15px; line-height: 29px;}
+.custodyCommonPopup .custodyList li .inputRadioBox label::before{content: ''; position: absolute; top: -4px; left:0; border: 1px solid #C1C3C4; border-radius: 50px; width: 21px; height: 21px;}
+.custodyCommonPopup .custodyList li .inputRadioBox input:checked + label::before{width: 9px; height: 9px; border: 7px solid #066AEB;}
+.custodyCommonPopup .inputTextBox{margin-top: 10px;}
+.custodyCommonPopup .inputTextBox input{height: 52px; border: 1px solid #E6E8EC; border-radius: 13px; font-size: 15px;}
+.custodyCommonPopup .btnBox{margin: 34px 0 0;}
+
+/* 퀵-결제 */
+.quickWrap .quickPaymentWrap .border{margin: 15px 0;}
+.quickWrap .quickPaymentWrap .text01{margin: 0 0 31px; font-size: 19px;}
+.quickWrap .quickPaymentWrap .quickMap{margin: 0 -18px 9px; height: 300px;}
+.quickWrap .quickPaymentWrap .quickMap img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.quickWrap .quickPaymentWrap .quickPaymentBox:nth-last-of-type(2){padding-bottom: 0;}
+.quickWrap .quickPaymentWrap .quickPaymentBox{ position: relative; padding: 15px 0 15px 0; background-color: #fff; z-index: 999;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .copy{width: 17px; height: 19px; position: absolute; top:50%; right:17px; transform: translateY(-50%); background: url(../images/sub/copy_icon.svg)no-repeat center; background-size: cover; }
+.quickWrap .quickPaymentWrap .quickPaymentBox::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; bottom: 0; z-index: -1; background-color: #fff;}
+.quickWrap .quickPaymentWrap .quickPaymentBox h2{margin-bottom: 8px; font-weight: 600; font-size: 16px; }
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li{position: relative;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.origin::before{width: 13px; height: 16px; content: ''; position: absolute; top: 20px; left:-25px; background: url(../images/sub/origin_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li::after{content: ''; width: 9px; height: 76px;  position: absolute; bottom: 20px; left: -23px; background: url(../images/sub/origin_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.number01::before{content: '1'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.number02::before{content: '2'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.number03::before{content: '3'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.number04::before{content: '4'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.number05::before{content: '5'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination{padding: 0 0 0 43px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li{margin-bottom: 3px; padding:17px 10px 17px 2px; border-bottom: 1px solid #E6E8EC; }
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .title{margin-bottom: 5px; display: block; font-weight: 600; font-size: 14px;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .name{margin-bottom: 5px; color: #707881; font-size: 14px; line-height: 1;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .address{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .number{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .caution{margin-top: 5px;  position: relative; padding-left: 21px; color: #066AEB; font-size: 14px}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li .caution::before{content: ''; position: absolute; top:1px; left:0; width: 15px; height: 15px; background: url(../images/sub/caution_icon.svg)no-repeat center; background-size: cover;} 
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.destination{border: 0;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.destination::after{display: none;}
+.quickWrap .quickPaymentWrap .quickPaymentBox .destination li.destination::before{content: '';position: absolute;
+    top: 20px; left: -25px;  width: 13px; height: 16px; background: url(../images/sub/destination_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox{position: relative; display: flex; align-items: center; height: 54px; border: 1px solid #ECEEF4; border-radius: 17px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox::after{content: ''; width: 23px; height: 23px; position: absolute; top: 16px; left: 50%; background: url(../images/sub/options_icon.svg.) no-repeat center;
+    background-size: cover; margin-left: -19px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox::before{content: ''; position: absolute; top: 9px;  left: 50%;width: 1px; height: 36px; background-color: #EEF0F4; margin-left: -8px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box{flex:1;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box01{padding-left: 15px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box span{position: relative; padding-left: 9px; color: #484E58; font-weight: 500; font-size: 14px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box span.damas{position: relative; padding-left: 47px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box span.damas::before{content: ''; width: 40px; height: 24px; position: absolute; top:-3px; left:0; background: url(../images/sub/damas_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box02{padding-left: 28px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box span.ktx{padding-left: 48px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox .optionsBox .box span.ktx::before{content: ''; width: 38px; height: 27px; position: absolute; top:-2px; left:0; background: url(../images/sub/ktx_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox a{position: relative; padding: 0 27px 0 16px; margin-bottom: 9px; height: 52px; line-height: 52px; display: flex;  justify-content: space-between; border: 1px solid #53565B; border: 1px solid #53565B; border-radius: 13px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox a::after{content: ''; width: 5px; height: 9px; position: absolute; top:50%; right:15px; transform: translateY(-50%); background: url(../images/sub/payment_arrow_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox a span{padding-left: 27px; position: relative; color: #066AEB; font-size: 15px;}
+ .quickWrap .quickPaymentWrap .quickPaymentBox a span::before{content: ''; width: 19px; height: 19px; position: absolute; top:50%; left:0; transform: translateY(-50%); background: url(../images/sub/payment_method_icon.svg)no-repeat center; background-size: cover; }
+ .quickWrap .quickPaymentWrap .quickPaymentBox a em{color: #707881; font-size: 13px;}
+ .quickWrap .quickPaymentWrap .commonPopup01{padding: 34px 17px 20px; margin: 28px -19px -30px; position: static; box-shadow: 0 0 30px rgba(0,0,0,10%); overflow: visible; border: 1px solid #E1E4EA;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap{display: flex; justify-content: space-between;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox{margin-bottom: 38px; display: flex; flex-direction: column; line-height: 1; }
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box01{ margin-bottom: 13px; font-weight: 600; font-size: 15px;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box01 span{position: relative; margin-right: 37px;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box01 span:last-child{margin-right: 0;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box01 span::after{content: ''; position: absolute; top:4px; right:-28px; width: 17px; height: 10px; background: url(../images/sub/application_arrow_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box01 span:last-child::after{display: none;}
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box02{
+font-size: 15px; color: #6E7175;}  
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationPrice{color: #066AEB; font-weight: 600;}
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box02 span{position: relative; margin-right: 19px;}
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box02 span:last-child{margin-right: 0;}
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box02 span:last-child::after{display: none;}
+.quickWrap .quickPaymentWrap .commonPopup01 .applicationWrap .applicationBox .box02 span::after{content: ''; position: absolute; top:7px; right:-12px; width: 2px; height: 2px; background-color: #BEC3C8; border-radius: 50px;} 
+.quickWrap .quickPaymentWrap .articleImgList{display: flex; gap: 7px 7px; flex-wrap: wrap;}
+.quickWrap .quickPaymentWrap .articleImgList li{width: 69px; height: 56px;}
+.quickWrap .quickPaymentWrap .articleImgList li img{display: block; width: 100%; height: 100%; object-fit: cover;}
+
+/* 퀵-결제수단 */
+.paymentCommonPopup01{padding: 29px 17px 18px; overflow: hidden;}
+.paymentCommonPopup01 .text{font-size: 18px; font-weight: 600;}
+.paymentCommonPopup01 .pointBox{margin-top: 58px; display: flex; align-items: center; height: 53px; border-top: 1px solid #F3F4F5;}
+.paymentCommonPopup01 .pointBox .pointText{padding-left: 25px; position: relative; margin-right: 33px; color: #232A37; font-weight: 600; font-size: 13px;}
+.paymentCommonPopup01 .pointBox .pointText::before{content: ''; width: 17px; height: 17px; position: absolute; top:-1px; left:0; background: url(../images/sub/point_icon.svg)no-repeat center; background-size: cover;}
+.paymentCommonPopup01 .pointBox .modeBox{position: absolute; right:17px;}
+.paymentCommonPopup01 .pointBox em{color: #232A37; font-size: 13px;}
+.paymentCommonPopup01 .btnBox{display: flex; gap: 0 4px; margin: 0;}
+.paymentCommonPopup01 .btnBox button{height: 50px; line-height: 50px; font-size: 15px;}
+.paymentCommonPopup01 .btnBox .comBtnSt04{width: 40%; font-weight: 400; background-color: #fff;}
+.paymentCommonPopup01 .btnBox .comBtnSt01{width: 60%; font-weight: 600;}
+.paymentCommonPopup01 .automaticPaymentBox{position: relative; margin: 31px 0 0 10.6vw;}
+.paymentCommonPopup01 .automaticPaymentBox .automaticPaymentAdd{width: 88px; height: 30px; line-height: 30px; position: absolute; top:-57px; right:0; border: 1px solid #DCE0E8; border-radius: 50px; background-color: #fff; text-align: center; font-size: 12px;}
+.paymentCommonPopup01 .automaticPayment li{margin-right: 18px;}
+.paymentCommonPopup01 .automaticPayment li a{padding: 37px 0 0; display: block; margin: 0 auto; width: 250px; height: 143px; border-radius: 13px; border: 1px solid #EBEEF2; background-color: #F5F6F7;}
+.paymentCommonPopup01 .automaticPayment li a span{position: relative; padding-top: 42px; display: block; text-align: center; font-weight: 600; line-height: 29px; }
+.paymentCommonPopup01 .automaticPayment li a span::before{content: ''; width: 33px; height: 33px; top:0; position: absolute; left: 50%; transform: translateX(-50%); background: url(../images/sub/automatic_payment_icon.svg)no-repeat center; background-size: cover;}
+.paymentCommonPopup01 .slick-dots{display: flex; gap: 0 10px; align-items: center; justify-content: center; position: absolute; bottom: -22px; left: 47%; transform: translateX(-50%); width: 100%;}
+.paymentCommonPopup01 .slick-dots li{width: 9px; height:9px; margin: 0;}
+.paymentCommonPopup01 .slick-dots li.slick-active button{background:#11141B;}
+.paymentCommonPopup01 .slick-dots li button{width: 9px; height:9px; text-indent: -9999px; border-radius: 50%; background-color:#BDC0C7; cursor: pointer;}
+.paymentCommonPopup01 .priceBox{position: relative; padding: 22px 0 0; z-index: 1;}
+.paymentCommonPopup01 .priceBox::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; bottom: -100%; background-color: #F8F8F8; z-index: -1;}
+.paymentCommonPopup01 .priceBox .box{display: flex; justify-content: space-between; align-items: center; line-height: 1;}
+.paymentCommonPopup01 .priceBox .box01{margin-bottom: 12px;}
+.paymentCommonPopup01 .priceBox .box01 span{color: #707881; font-size: 13px;}
+.paymentCommonPopup01 .priceBox .box02{margin-bottom: 35px;}
+.paymentCommonPopup01 .priceBox .box02 span{font-weight: 700;}
+.paymentCommonPopup01 .paymentReg{margin-top: 15px;}
+.paymentCommonPopup01 .paymentReg li{margin-bottom: 7px;}
+.paymentCommonPopup01 .paymentReg li:last-child{margin-bottom: 73px;}
+.paymentCommonPopup01 .paymentReg li a{display: block; height: 87px; line-height: 87px; border-radius: 13px; background-color: #F5F6F7; border: 1px solid #EBEEF2; font-weight: 600; text-align: center;}
+.paymentCommonPopup01 .paymentReg + .btnBox button{width: 100%;}
+.paymentCommonPopup02 .automaticPaymentBox .automaticPayment li a span::before{top: -2px; width: 61px; height: 35px; background: url(../images/sub/payment_icon02.svg)no-repeat center; background-size: cover;}
+.paymentCommonPopup02 .automaticPaymentBox p{color: #D51F14; font-size: 13px; text-align: center;}
+.paymentCommonPopup02 .pointBox .pointText{color: #B3B9C4;}
+.paymentCommonPopup02 .pointBox .pointText::before{background: url(../images/sub/off_point_icon.svg)no-repeat center; background-size: cover;}
+.paymentCommonPopup02 .pointBox em{color: #B3B9C4;}
+.paymentCommonPopup02 .btnBox .comBtnSt01{width: 100%;}
+
+/* 퀵-상세정보-결제수단 */
+.detailPaymentWrap{padding: 42px 18px 50px; overflow-x: auto;}
+.detailPaymentWrap .detailPaymentList{width: 552px; display: flex; flex-wrap: wrap; gap: 15px 39px; }
+.detailPaymentWrap .detailPaymentList li{/*width: 41.6%;*/ width: 250px;}
+.detailPaymentWrap .detailPaymentList li a{height: 143px; display: block; border: 1px solid #EBEEF2; border-radius: 13px; text-align: center; background-color: #F5F6F7;}
+.detailPaymentWrap .detailPaymentList li a span{position: relative; display: block; font-weight: 600; line-height: 29px;}
+.detailPaymentWrap .detailPaymentList li a span::before{content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%); top:0;}
+.detailPaymentWrap .detailPaymentList li a .subText01{color: #D51F14; font-size: 13px;}
+.detailPaymentWrap .detailPaymentList li a .subText02{color: #707881; font-size: 13px; line-height: 1;}
+.detailPaymentWrap .detailPaymentList li a.payment01{padding: 37px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment01 span{padding-top: 42px;}
+.detailPaymentWrap .detailPaymentList li a.payment01 span::before{width: 33px; height: 33px; background: url(../images/sub/payment01_icon.svg)no-repeat center; background-size: cover;}
+.detailPaymentWrap .detailPaymentList li a.payment02{padding: 36px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment02 span{padding-top: 44px;}
+.detailPaymentWrap .detailPaymentList li a.payment02 span::before{width: 61px; height: 35px; background: url(../images/sub/payment02_icon.svg)no-repeat center; background-size: cover;}
+.detailPaymentWrap .detailPaymentList li a.payment03{padding: 31px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment03 span{padding-top: 46px;}
+.detailPaymentWrap .detailPaymentList li a.payment03 span::before{width: 67px; height: 43px; background: url(../images/sub/payment03_icon.svg)no-repeat center; background-size: cover;}
+.detailPaymentWrap .detailPaymentList li a.payment04{padding: 32px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment04 span{padding-top: 48px;}
+.detailPaymentWrap .detailPaymentList li a.payment04 span::before{width: 66px; height: 43px; background: url(../images/sub/payment04_icon.svg)no-repeat center; background-size: cover;}
+.detailPaymentWrap .detailPaymentList li a.payment05{padding: 34px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment05 span{padding-top: 46px;}
+.detailPaymentWrap .detailPaymentList li a.payment05 span::before{width: 30px; height: 43px; background: url(../images/sub/payment05_icon.svg)no-repeat center; background-size: cover;}
+.detailPaymentWrap .detailPaymentList li a.payment06{padding: 31px 10px 0;}
+.detailPaymentWrap .detailPaymentList li a.payment06 span{padding-top: 49px;}
+.detailPaymentWrap .detailPaymentList li a.payment06 span::before{width: 48px; height: 43px; background: url(../images/sub/payment06_icon.svg)no-repeat center; background-size: cover;}
+
+@media (max-width: 360px){
+
+    .detailPaymentWrap .detailPaymentList{width: auto; justify-content: center;}
+
+}
+
+.quickWrap .completeBox .map{ margin: 0 -18px -92vw; background-color: #fff;}
+.quickWrap .completeBox .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.quickWrap .completeBox .mapInfoBox{margin: 0 -18px; position: relative; padding: 28px 18px 40px; background-color: #fff; border-radius: 27px 27px 0 0;}
+.quickWrap .completeBox .mapInfoBox::after{content: ''; width: 72px; height: 57px; position: absolute; top:59px; right:18px; background: url(../images/sub/map_icon01.svg)no-repeat center; background-size: cover;}
+.quickWrap .completeBox .mapInfoBox::before{width: 31px; height: 27px; content: ''; position: absolute; top: 92px; right:61px; background: url(../images/sub/map_icon02.svg)no-repeat center; background-size: cover; z-index: 9;}
+.quickWrap .completeBox .mapInfoBox .title{margin-bottom: 7px; font-weight: 600; font-size: 19px; line-height: 25px;} 
+.quickWrap .completeBox .mapInfoBox p.text{margin-bottom: 17px; color: #9CA0A8; font-size: 13px; line-height: 17px;} 
+.quickWrap .completeBox .mapInfoBox a{margin-bottom: 26px; width: 114px; height: 33px; line-height: 31px; display: block; border: 1px solid #DCE0E8; border-radius: 50px; font-size: 13px; text-align: center;}
+.quickWrap .completeBox .mapInfoBox .serviceList{ position: relative;}
+.quickWrap .completeBox .mapInfoBox .serviceList li.active.step01::after{background-color: #D9D9D9!important;}
+.quickWrap .completeBox .mapInfoBox .serviceList li.active .text{color: #11141B;}
+.quickWrap .completeBox .mapInfoBox .serviceList li.active::before,
+.quickWrap .completeBox .mapInfoBox .serviceList li.active::after{background-color: #337EFB; border-color: #337EFB;}
+.quickWrap .completeBox .mapInfoBox .serviceList li{position: relative; padding-left: 20px; margin-bottom: 12px; display: flex; justify-content: space-between;}
+.quickWrap .completeBox .mapInfoBox .serviceList li::before{content: ''; position: absolute;
+    left: 0; top: 3px; width: 4px; height: 4px; border: 3px solid #D9D9D9; border-radius: 50px; z-index: 9;}
+.quickWrap .completeBox .mapInfoBox .serviceList li::after{content: ''; position: absolute;
+    left: 4px; width: 2px; height: 21px; top: -16px; background-color: #D9D9D9;}
+.quickWrap .completeBox .mapInfoBox .serviceList li:first-child::after{display: none;}
+.quickWrap .completeBox .mapInfoBox .serviceList li:last-child{margin-bottom: 0;}
+.quickWrap .completeBox .mapInfoBox .serviceList li .text{font-size: 13px; line-height: 17px; color: #9CA0A8;}
+.quickWrap .completeBox .mapInfoBox .serviceList li .time{color: #9CA0A8; font-size: 13px; line-height: 17px;}
+.quickWrap .completeBox02.first{padding-top: 30px!important;}
+.quickWrap .completeBox02{ position: relative; padding: 15px 0 12.5px 0; background-color: #fff; z-index: 999;}
+.quickWrap .completeBox02 .copy{width: 17px; height: 19px; position: absolute; top:50%; right:17px; transform: translateY(-50%); background: url(../images/sub/copy_icon.svg)no-repeat center; background-size: cover; }
+.quickWrap .completeBox02::after{content: ''; position: absolute; top:0; left:-100%; right:-100%; bottom: 0; z-index: -1; background-color: #fff;}
+.quickWrap .completeBox02 h2{margin-bottom: 8px; font-weight: 600; font-size: 16px; }
+.quickWrap .completeBox02 .destination li{position: relative;}
+.quickWrap .completeBox02 .destination li.origin::before{width: 13px; height: 16px; content: ''; position: absolute; top: 20px; left:-25px; background: url(../images/sub/origin_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .completeBox02 .destination li::after{content: ''; width: 9px; height: 76px;  position: absolute; bottom: 20px; left: -23px; background: url(../images/sub/origin_arrow_icon.svg)no-repeat center; background-size: cover;}
+.quickWrap .completeBox02 .destination li.number01::before{content: '1'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .completeBox02 .destination li.number02::before{content: '2'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .completeBox02 .destination li.number03::before{content: '3'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .completeBox02 .destination li.number04::before{content: '4'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .completeBox02 .destination li.number05::before{content: '5'; width: 18px; height: 18px; line-height: 18px; position: absolute; top: 17px; left: -29px; border: 1px solid #ACB0BB; text-align: center; font-weight: 500; font-size: 9px; border-radius: 50px; color: #ACB0BB; font-weight: 500;}
+.quickWrap .completeBox02 .destination{padding: 0 0 0 43px; border: 1px solid #E6E8EC; border-radius: 13px;}
+.quickWrap .completeBox02 .destination li{margin-bottom: 3px; padding:17px 10px 17px 2px; border-bottom: 1px solid #E6E8EC; }
+.quickWrap .completeBox02 .destination li .title{margin-bottom: 5px; display: block; font-weight: 600; font-size: 14px;}
+.quickWrap .completeBox02 .destination li .name{margin-bottom: 5px; color: #707881; font-size: 14px; line-height: 1;}
+.quickWrap .completeBox02 .destination li .address{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.quickWrap .completeBox02 .destination li .number{margin-bottom: 5px; color: #707881; font-size: 14px; }
+.quickWrap .completeBox02 .destination li .caution{margin-top: 5px;  position: relative; padding-left: 21px; color: #066AEB; font-size: 14px}
+.quickWrap .completeBox02 .destination li .caution::before{content: ''; position: absolute; top:1px; left:0; width: 15px; height: 15px; background: url(../images/sub/caution_icon.svg)no-repeat center; background-size: cover;} 
+.quickWrap .completeBox02 .destination li.destination{border: 0;}
+.quickWrap .completeBox02 .destination li.destination::after{display: none;}
+.quickWrap .completeBox02 .destination li.destination::before{content: '';position: absolute;
+    top: 20px; left: -25px;  width: 13px; height: 16px; background: url(../images/sub/destination_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .completeBox02 .optionsBox{position: relative; display: flex; align-items: center; height: 54px; border: 1px solid #ECEEF4; border-radius: 17px;}
+ .quickWrap .completeBox02 .optionsBox::after{content: ''; width: 23px; height: 23px; position: absolute; top: 16px; left: 50%; background: url(../images/sub/options_icon.svg.) no-repeat center;
+    background-size: cover; margin-left: -19px;}
+ .quickWrap .completeBox02 .optionsBox::before{content: ''; position: absolute; top: 9px;  left: 50%;width: 1px; height: 36px; background-color: #EEF0F4; margin-left: -8px;}
+ .quickWrap .completeBox02 .optionsBox .box{flex:1;}
+ .quickWrap .completeBox02 .optionsBox .box01{padding-left: 15px;}
+ .quickWrap .completeBox02 .optionsBox .box span{position: relative; padding-left: 9px; color: #484E58; font-weight: 500; font-size: 14px;}
+ .quickWrap .completeBox02 .optionsBox .box span.damas{position: relative; padding-left: 47px;}
+ .quickWrap .completeBox02 .optionsBox .box span.damas::before{content: ''; width: 40px; height: 24px; position: absolute; top:-3px; left:0; background: url(../images/sub/damas_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .completeBox02 .optionsBox .box02{padding-left: 28px;}
+ .quickWrap .completeBox02 .optionsBox .box span.ktx{padding-left: 48px;}
+ .quickWrap .completeBox02 .optionsBox .box span.ktx::before{content: ''; width: 38px; height: 27px; position: absolute; top:-2px; left:0; background: url(../images/sub/ktx_icon.svg)no-repeat center; background-size: cover;}
+
+ /* 퀵-배차완료 */
+ .quickWrap .dispatchCompleteWrap .completeBox .mapInfoBox .title{margin-bottom: 21px;}
+ .quickWrap .dispatchCompleteWrap .completeBox .mapInfoBox::after{right:32px; top: 34px; width: 50px; height: 44px; background: url(../images/sub/motorcycle_icon.svg)no-repeat center; background-size: cover;}
+ .quickWrap .dispatchCompleteWrap .completeBox .mapInfoBox::before{display: none;}
